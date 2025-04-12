@@ -5,16 +5,60 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 6.1.1 (Python 3.11.5 on darwin)" name="Generator">
+<meta content="Robot Framework 7.2 (Python 3.9.9 on darwin)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
-<style media="all" type="text/css">
+<style media="all">
+:root {
+    --text-color: black;
+    --background-color: white;
+    --primary-color: #ddd;
+    --secondary-color: #ccc;
+    --link-color: #15c;
+    --link-hover-color: #61c;
+    --highlight-color: #eee;
+    --target-color: #f9f9f9;
+    --pass-color: #97bd61;
+    --fail-color: #ce3e01;
+    --warn-color: #fed84f;
+    --pass-link-color: #098a09;
+    --warn-link-color: #927201;
+    --fail-link-color: #ce3e01;
+    --ascending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
+    --descending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
+[data-theme="dark"] {
+    --text-color: #e2e1d7;
+    --background-color: #1c2227;
+    --primary-color: #26373b;
+    --secondary-color: #424f5a;
+    --link-color: #8cc4ff;
+    --link-hover-color: #bb86fc;
+    --highlight-color: #002b36;
+    --target-color: #1a252e;
+    --pass-link-color: #97bd61;
+    --warn-link-color: #fed84f;
+    --fail-link-color: #ff9b8f;
+    --ascending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAAfn5+////f/cqYgAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
+    --descending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAA////fn5+K6jOaAAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
+}
 /* Generic and misc styles */
 body {
     font-family: Helvetica, sans-serif;
     font-size: 0.8em;
-    color: black;
+    color: black; /* Fallback value */
+    color: var(--text-color);
     padding: 6px;
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
+    margin-left: 15px;
+}
+body[theme-toggled] {
+    transition: background 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 table {
     table-layout: fixed;
@@ -29,20 +73,37 @@ br {
     mso-data-placement: same-cell; /* maintain line breaks in Excel */
 }
 hr {
-    background: #ccc;
+    background: #ccc; /* Fallback value */
+    background: var(--secondary-color);
     height: 1px;
     border: 0;
 }
 a, a:link, a:visited {
     text-decoration: none;
-    color: #15c;
+    color: #15c; /* Fallback value */
+    color: var(--link-color);
 }
 a > img {
-    border: 1px solid #15c !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #15c !important; /* Fallback value */
+    border-color: var(--link-color) !important;
 }
 a:hover, a:active {
     text-decoration: underline;
-    color: #61c;
+    color: #61c; /* Fallback value */
+    color: var(--link-hover-color);
+}
+select {
+    background-color: white; /* Fallback value */
+    background-color: var(--background-color);
+    color: black; /* Fallback value */
+    color: var(--text-color);
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-radius: 4px;
 }
 .parent-name {
     font-size: 0.7em;
@@ -55,7 +116,7 @@ a:hover, a:active {
 #header {
     width: 65em;
     height: 3em;
-    margin: 6px 0;
+    margin: 20px 0 6px 0;
 }
 h1 {
     float: left;
@@ -83,14 +144,17 @@ h2 {
 }
 /* Status text colors -- !important allows using them in links */
 .fail {
-    color: #ce3e01 !important;
+    color: #ce3e01 !important; /* Fallback value */
+    color: var(--fail-link-color) !important;
     font-weight: bold;
 }
 .pass {
-    color: #098a09 !important;
+    color: #098a09 !important; /* Fallback value */
+    color: var(--pass-link-color) !important;
 }
 .skip {
-    color: #927201 !important;
+    color: #927201 !important; /* Fallback value */
+    color: var(--warn-link-color) !important;
     font-weight: bold;
 }
 .label {
@@ -98,8 +162,10 @@ h2 {
     font-size: 0.75em;
     letter-spacing: 1px;
     white-space: nowrap;
-    color: black;
-    background-color: #ddd;
+    color: black; /* Fallback value */
+    color: var(--text-color);
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
     border-radius: 3px;
 }
 .label.debug, .label.trace, .label.error, .label.keyword {
@@ -109,15 +175,18 @@ h2 {
     font-weight: bold;
 }
 .label.pass {
-    background-color: #97bd61;
+    background-color: #97bd61; /* Fallback value */
+    background-color: var(--pass-color);
     color: #000 !important;
 }
 .label.fail, .label.error {
-    background-color: #ce3e01;
+    background-color: #ce3e01; /* Fallback value */
+    background-color: var(--fail-color);
     color: #fff !important;
 }
 .label.skip, .label.warn {
-    background-color: #fed84f;
+    background-color: #fed84f; /* Fallback value */
+    background-color: var(--warn-color);
     color: #000 !important;
 }
 /* Top right header */
@@ -146,7 +215,8 @@ h2 {
     padding: 0.3em 0;
     font-size: 0.9em;
     border-bottom-left-radius: 4px;
-    background: #ddd;
+    background: #ddd; /* Fallback value */
+    background: var(--primary-color);
 }
 /* Statistics table */
 .statistics {
@@ -156,15 +226,20 @@ h2 {
     margin-bottom: 1em;
 }
 .statistics tr:hover {
-    background: #f4f4f4;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
     cursor: pointer;
 }
 .statistics th, .statistics td {
-    border: 1px solid #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
     padding: 0.1em 0.3em;
 }
 .statistics th {
-    background-color: #ddd;
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
     padding: 0.2em 0.3em;
 }
 .statistics td {
@@ -200,27 +275,33 @@ th.stats-col-graph:hover {
 }
 /* Statistics graph */
 .graph, .empty-graph {
-    border: 1px solid #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
     width: auto;
     height: 7px;
     padding: 0;
-    background: #aaa;
 }
 .empty-graph {
-    background: #eee;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .pass-bar, .fail-bar, .skip-bar {
     float: left;
     height: 100%;
 }
 .fail-bar {
-    background: #ce3e01;
+    background: #ce3e01; /* Fallback value */
+    background: var(--fail-color);
 }
 .pass-bar {
-    background: #97bd61;
+    background: #97bd61; /* Fallback value */
+    background: var(--pass-color);
 }
 .skip-bar {
-    background: #fed84f;
+    background: #fed84f; /* Fallback value */
+    background: var(--warn-color);
 }
 /* Tablesorter - adapted from provided Blue Skin */
 .tablesorter-header {
@@ -230,30 +311,84 @@ th.stats-col-graph:hover {
     cursor: pointer;
 }
 .tablesorter-header:hover {
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--secondary-color);
 }
 .tablesorter-headerAsc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
-    background-color: #ccc !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==); /* Fallback value */
+    background-image: var(--ascending-icon);
+    background-color: #ccc !important; /* Fallback value */
+    background-color: var(--secondary-color) !important;
 }
 .tablesorter-headerDesc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
-    background-color: #ccc !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==); /* Fallback value */
+    background-image: var(--descending-icon);
+    background-color: #ccc !important; /* Fallback value */
+    background-color: var(--secondary-color) !important;
 }
 .sorter-false {
     background-image: none;
     cursor: default;
 }
 .sorter-false:hover {
-    background-color: #ddd;
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
+}
+#theme-toggle {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 28px;
+    height: 28px;
+    border: none;
+    padding: 4px;
+    z-index: 1000;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: var(--highlight-color);
+}
+[data-theme="dark"] .dark-mode-icon,
+[data-theme="light"] .light-mode-icon {
+    display: none;
+}
+[data-theme="dark"] .light-mode-icon,
+[data-theme="light"] .dark-mode-icon {
+    display: block;
+}
+@keyframes highlight {
+    0% {
+        background: var(--primary-color)
+    }
+    100% {
+        background: var(--target-color);
+    }
+}
+:target {
+    background: var(--target-color);
+    transition: background 0.3s;
+    animation: highlight 4s;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
 /* Icons are from Open Iconic <https://useiconic.com/open/>.
    Licensed under the MIT License. */
+:root {
+    --icon-filter: invert(0);
+    --icon-highlight: var(--secondary-color);
+    --elapsed-color: #666;
+}
+/* @media (prefers-color-scheme: dark) { */
+[data-theme="dark"] {
+    --icon-filter: invert(1);
+    --icon-highlight: #a39990;
+    --elapsed-color: #999;
+}
 /* Containers */
 .suite, .test, #errors {
-    border: 1px solid #ccc;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 1px;
+    border-style: solid;
     padding: 0.3em 0.2em;
     margin: 0.2em 0;
 }
@@ -282,8 +417,10 @@ th.stats-col-graph:hover {
 }
 .element-header:hover {
     cursor: pointer;
-    background-color: #eee;
-    border-color: #ccc;
+    background-color: #eee; /* Fallback value */
+    background-color: var(--highlight-color);
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
 }
 .element-header-toggle {
     position: absolute;
@@ -293,10 +430,14 @@ th.stats-col-graph:hover {
     background-position: center;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0JChSkZz20AAAAGklEQVQI12NgQAKMDKzInP8IDhOqMk4G7AAANQwBE427PYUAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2Mmg4di0yaC04eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAzKSIgLz4KPC9zdmc+), none;
+    filter: var(--icon-filter);
     height: 10px;
     width: 10px;
     background-size: 6px 6px;
-    border: 1px solid #ccc;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--icon-highlight);
+    border-width: 1px;
+    border-style: solid;
     border-radius: 2px;
 }
 .closed > .element-header-toggle {
@@ -304,7 +445,8 @@ th.stats-col-graph:hover {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0zIDB2M2gtM3YyaDN2M2gydi0zaDN2LTJoLTN2LTNoLTJ6IiAvPgo8L3N2Zz4=), none;
 }
 .element-header:hover > .element-header-toggle {
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--icon-highlight);
 }
 .element-header-right:hover ~ .element-header-toggle {
     background-color: transparent;
@@ -324,23 +466,31 @@ th.stats-col-graph:hover {
 }
 .name {
     font-weight: bold;
+    white-space: pre-wrap;
+}
+.arg, .assign {
+    white-space: pre-wrap;
 }
 .elapsed {
     float: right;
-    color: #666;
+    color: #666; /* Fallback value */
+    color: var(--elapsed-color);
     padding-left: 1em;
 }
 .link {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAHlJREFUGJVtzrEJwmAQBtCn6ASuIKTIBhY2gmghBiJYB1udwk10B8FJbKMBcQFbtbkfJHrVwfu+4/idJR64Y9H7E3higj5O3S8Y44ApLnjhnXCNGhV2yNGggDJwiC02gavUbpDFvscRo4QdXOMKDHBufz3HLYKzNn4AbSkV3fncGQYAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik01Ljg4LjAzYy0uMTguMDEtLjM2LjAzLS41My4wOS0uMjcuMS0uNTMuMjUtLjc1LjQ3YS41LjUgMCAxIDAgLjY5LjY5Yy4xMS0uMTEuMjQtLjE3LjM4LS4yMi4zNS0uMTIuNzgtLjA3IDEuMDYuMjIuMzkuMzkuMzkgMS4wNCAwIDEuNDRsLTEuNSAxLjVjLS40NC40NC0uOC40OC0xLjA2LjQ3LS4yNi0uMDEtLjQxLS4xMy0uNDEtLjEzYS41LjUgMCAxIDAtLjUuODhzLjM0LjIyLjg0LjI1Yy41LjAzIDEuMi0uMTYgMS44MS0uNzhsMS41LTEuNWMuNzgtLjc4Ljc4LTIuMDQgMC0yLjgxLS4yOC0uMjgtLjYxLS40NS0uOTctLjUzLS4xOC0uMDQtLjM4LS4wNC0uNTYtLjAzem0tMiAyLjMxYy0uNS0uMDItMS4xOS4xNS0xLjc4Ljc1bC0xLjUgMS41Yy0uNzguNzgtLjc4IDIuMDQgMCAyLjgxLjU2LjU2IDEuMzYuNzIgMi4wNi40Ny4yNy0uMS41My0uMjUuNzUtLjQ3YS41LjUgMCAxIDAtLjY5LS42OWMtLjExLjExLS4yNC4xNy0uMzguMjItLjM1LjEyLS43OC4wNy0xLjA2LS4yMi0uMzktLjM5LS4zOS0xLjA0IDAtMS40NGwxLjUtMS41Yy40LS40Ljc1LS40NSAxLjAzLS40NC4yOC4wMS40Ny4wOS40Ny4wOWEuNS41IDAgMSAwIC40NC0uODhzLS4zNC0uMi0uODQtLjIyeiIKICAvPgo8L3N2Zz4=), none;
+    filter: var(--icon-filter);
 }
 .expand {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUGJVjYCACKDAwMByA0ljFDjAwMPxnYGB4ABVQgLL/Q+VQBB6gseGmIivCkERXhFUSWRFOSawAAEl7E3uv1iMcAAAAAElFTkSuQmCC);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0xLjUgMGwtMS41IDEuNSA0IDQgNC00LTEuNS0xLjUtMi41IDIuNS0yLjUtMi41eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxKSIgLz4KPC9zdmc+), none;
+    filter: var(--icon-filter);
 }
 .collapse {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAC5JREFUGJVjYCARNEAxTsn/UIyhCFkSQxG6ThQ+C5IpjWhG1yNb4YDFTdjEMAEACi8Q++9Y9TAAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik00IDBsLTQgNCAxLjUgMS41IDIuNS0yLjUgMi41IDIuNSAxLjUtMS41LTQtNHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMSkiIC8+Cjwvc3ZnPg==), none;
+    filter: var(--icon-filter);
 }
 .expand, .collapse, .link {
     float: left;
@@ -352,7 +502,10 @@ th.stats-col-graph:hover {
     background-size: 8px 8px;
     background-repeat: no-repeat;
     background-position: center;
-    border: 1px solid #ccc;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--icon-highlight);
+    border-width: 1px;
+    border-style: solid;
     border-radius: 2px;
 }
 .link {
@@ -362,7 +515,8 @@ th.stats-col-graph:hover {
     visibility: visible;
 }
 .expand:hover, .collapse:hover, .link:hover {
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--icon-highlight);
 }
 /* Messages and errors */
 .messages .time, .messages .message {
@@ -403,11 +557,16 @@ th.stats-col-graph:hover {
 .message-row:hover .select-message div {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0MOzhWKZQOAAAASUlEQVQY032PsRHAIAwDX9BkicD+W8UMEqegAQJWKZ/+3sLZJhFGQEZzNaIa4ibh66En867VNaIeoP5WppNuIGoAlOm3g5VC1AdYeQv1BZPRSgAAAABJRU5ErkJggg==);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2MWg4di0xaC04em0wIDJ2MWg2di0xaC02em0wIDJ2MWg4di0xaC04em0wIDJ2MWg2di0xaC02eiIgLz4KPC9zdmc+), none;
-    border: 1px solid #ccc;
+    filter: var(--icon-filter);
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--icon-highlight);
+    border-width: 1px;
+    border-style: solid;
     border-radius: 2px;
 }
 .select-message:hover div {
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--icon-highlight);
     cursor: pointer;
 }
 /* Message tables - these MUST NOT be combined together because otherwise
@@ -439,7 +598,7 @@ th.stats-col-graph:hover {
     cursor: default;
 }
 </style>
-<style media="print" type="text/css">
+<style media="print">
 body {
     background: white !important;
     padding: 0;
@@ -479,7 +638,7 @@ a:link, a:visited {
     background: #ddd !important;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
 #javascript-disabled {
     width: 600px;
     margin: 100px auto 0 auto;
@@ -502,7 +661,7 @@ a:link, a:visited {
     font-style: italic;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
 .doc > * {
     margin: 0.7em 1em 0.1em 1em;
     padding: 0;
@@ -514,14 +673,12 @@ a:link, a:visited {
     margin-top: 0.1em;
 }
 .doc table {
-    border: 1px solid #ccc;
     background: transparent;
     border-collapse: collapse;
     empty-cells: show;
     font-size: 0.9em;
 }
 .doc table th, .doc table td {
-    border: 1px solid #ccc;
     background: transparent;
     padding: 0.1em 0.3em;
     height: 1.2em;
@@ -531,24 +688,32 @@ a:link, a:visited {
     letter-spacing: 0.1em;
 }
 .doc pre {
+    border-radius: 2px;
     font-size: 1.1em;
     letter-spacing: 0.05em;
-    background: #f4f4f4;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .doc code {
+    border-radius: 2px;
     padding: 0 0.2em;
     letter-spacing: 0.05em;
-    background: #eee;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .doc li {
     list-style-position: inside;
     list-style-type: square;
 }
-.doc img {
-    border: 1px solid #ccc;
+.doc img, .doc table, .doc table th, .doc table td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
 }
 .doc hr {
-    background: #ccc;
+    background: #ccc; /* Fallback value */
+    background: var(--secondary-color);
     height: 1px;
     border: 0;
 }
@@ -850,7 +1015,6 @@ window.model = (function () {
         suite.populateSuites = createIterablePopulator('Suite');
         suite.childrenNames = ['keyword', 'suite', 'test'];
         suite.callWhenChildrenReady = function (callable) { callable(); };
-        suite.message = data.message;
         suite.children = function () {
             return suite.keywords().concat(suite.tests()).concat(suite.suites());
         };
@@ -941,6 +1105,7 @@ window.model = (function () {
             name: data.name,
             doc: data.doc,
             status: data.status,
+            message: data.message,
             times: data.times,
             id: data.parent ? data.parent.id + '-' + data.id : data.id
         };
@@ -961,7 +1126,6 @@ window.model = (function () {
                 return test.keywords();
         };
         test.tags = data.tags;
-        test.message = data.message;
         test.matchesTagPattern = function (pattern) {
             return containsTagPattern(test.tags, pattern);
         };
@@ -972,13 +1136,12 @@ window.model = (function () {
     }
     function Keyword(data) {
         var kw = createModelObject(data);
-        var flatTypes = ['RETURN', 'BREAK', 'CONTINUE'];
         kw.libname = data.libname;
         kw.fullName = (kw.libname ? kw.libname + '.' : '') + kw.name;
         kw.type = data.type;
         kw.template = 'keywordTemplate';
         kw.arguments = data.args;
-        kw.assign = data.assign + (data.assign ? ' =' : '');
+        kw.assign = data.assign + (data.assign ? ' =  ' : '');
         kw.tags = data.tags;
         kw.timeout = data.timeout;
         kw.populateKeywords = createIterablePopulator('Keyword');
@@ -1089,58 +1252,48 @@ window.stats = (function () {
             });
     }
     function calculatePercents(total, passed, failed, skipped) {
-        if (total == 0) {
+        if (total == 0)
             return [0.0, 0.0, 0.0];
-        }
         var pass = 100.0 * passed / total;
         var skip = 100.0 * skipped / total;
         var fail = 100.0 * failed / total;
         if (pass > 0 && pass < 0.1)
-            pass = 0.1
+            pass = 0.1;
         if (fail > 0 && fail < 0.1)
-            fail = 0.1
+            fail = 0.1;
         if (skip > 0 && skip < 0.1)
-            skip = 0.1
+            skip = 0.1;
         if (pass > 99.95 && pass < 100)
-            pass = 99.9
+            pass = 99.9;
         if (fail > 99.95 && fail < 100)
-            fail = 99.9
+            fail = 99.9;
         if (skip > 99.95 && skip < 100)
-            skip = 99.9
-        return [Math.round(pass*10)/10, Math.round(skip*10)/10, Math.round(fail*10)/10];
+            skip = 99.9;
+        return [round1(pass), round1(skip), round1(fail)];
     }
     function calculateWidths(num1, num2, num3) {
         if (num1 + num2 + num3 === 0)
             return [0.0, 0.0, 0.0];
         // Make small percentages better visible
         if (num1 > 0 && num1 < 1)
-            num1 = 1
+            num1 = 1.0;
         if (num2 > 0 && num2 < 1)
-            num2 = 1
+            num2 = 1.0;
         if (num3 > 0 && num3 < 1)
-            num3 = 1
+            num3 = 1.0;
         // Handle situation where some are rounded up
         while (num1 + num2 + num3 > 100) {
-            if (num1 > num2 && num1 > num3)
-                num1 -= 0.1;
-            else if (num2 > num1 && num2 > num3)
-                num2 -= 0.1;
-            else if (num3 > num1 && num3 > num2)
-                num3 -= 0.1;
-            else if (num1 > num3 && num1 == num2) {
-                num1 -= 0.1;
-                num2 -= 0.1;
-            }
-            else if (num1 > num2 && num1 == num3) {
-                num1 -= 0.1;
-                num3 -= 0.1;
-            }
-            else if (num2 > num1 && num2 == num3) {
-                num2 -= 0.1;
-                num3 -= 0.1;
-            }
+            if (num1 >= num2 && num1 >= num3)
+                num1 = round1(num1 - 0.1);
+            else if (num2 >= num1 && num2 >= num3)
+                num2 = round1(num2 - 0.1);
+            else
+                num3 = round1(num3 - 0.1);
         }
-        return [Math.ceil(num1*10)/10, Math.ceil(num2*10)/10, Math.ceil(num3*10)/10];
+        return [num1, num2, num3];
+    }
+    function round1(num) {
+        return Math.round(num*10) / 10;
     }
     return {
         Statistics: Statistics
@@ -1357,8 +1510,9 @@ window.testdata = function () {
     var _statistics = null;
     var LEVELS = ['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FAIL', 'SKIP'];
     var STATUSES = ['FAIL', 'PASS', 'SKIP', 'NOT RUN'];
-    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF', 'ELSE IF', 'ELSE', 'RETURN',
-                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
+    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF',
+                         'ELSE IF', 'ELSE', 'RETURN', 'VAR', 'TRY', 'EXCEPT', 'FINALLY',
+                         'WHILE', 'GROUP', 'CONTINUE', 'BREAK', 'ERROR'];
     function addElement(elem) {
         if (!elem.id)
             elem.id = uniqueId();
@@ -1401,6 +1555,7 @@ window.testdata = function () {
         return createKeyword(parent, element, strings, index - messages.length);
     }
     function createKeyword(parent, element, strings, index) {
+        var status = element[8];
         var kw = model.Keyword({
             parent: parent,
             type: KEYWORD_TYPES[element[0]],
@@ -1416,7 +1571,12 @@ window.testdata = function () {
                 this.doc = function () { return doc; };
                 return doc;
             },
-            status: parseStatus(element[8], strings),
+            status: parseStatus(status),
+            message: function () {
+                var msg = status.length == 4 ? strings.get(status[3]) : '';
+                this.message = function () { return msg; };
+                return msg;
+            },
             times: model.Times(times(element[8])),
             isChildrenLoaded: typeof(element[9]) !== 'number'
         });
@@ -1627,6 +1787,20 @@ window.testdata = function () {
 }();
 </script>
 <script type="text/javascript">
+const lightModeIcon = `
+<svg class="light-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+    viewBox="0 0 24 24" fill="var(--text-color)">
+    <rect fill="none" height="24" width="24" />
+    <path
+        d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0 c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2 c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1 C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06 c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41 l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41 c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36 c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z" />
+</svg>`
+const darkModeIcon = `
+<svg class="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+    viewBox="0 0 24 24" fill="var(--text-color)">
+    <rect fill="none" height="24" width="24" />
+    <path
+        d="M11.01,3.05C6.51,3.54,3,7.36,3,12c0,4.97,4.03,9,9,9c4.63,0,8.45-3.5,8.95-8c0.09-0.79-0.78-1.42-1.54-0.95 c-0.84,0.54-1.84,0.85-2.91,0.85c-2.98,0-5.4-2.42-5.4-5.4c0-1.06,0.31-2.06,0.84-2.89C12.39,3.94,11.9,2.98,11.01,3.05z" />
+</svg>`
 function removeJavaScriptDisabledWarning() {
     // Not using jQuery here for maximum speed
     document.getElementById('javascript-disabled').style.display = 'none';
@@ -1662,6 +1836,10 @@ function setTitle(suiteName, type) {
 function addHeader() {
     var generated = util.timestamp(window.output.generated);
     $.tmpl('<h1>${title}</h1>' +
+           '<button id=theme-toggle>' +
+             lightModeIcon +
+             darkModeIcon +
+           '</button>' +
            '<div id="generated">' +
              '<span>Generated<br>${generated}</span><br>' +
              '<span id="generated-ago">${ago} ago</span>' +
@@ -1673,6 +1851,7 @@ function addHeader() {
         ago: util.createGeneratedAgoString(generated),
         title: document.title
     }).appendTo($('#header'));
+    document.getElementById('theme-toggle')?.addEventListener('click', theme.onClick);
 }
 function addReportOrLogLink(myType) {
     var url;
@@ -1801,30 +1980,116 @@ function stopPropagation(event) {
     if (event.stopPropagation)
         event.stopPropagation();
 }
+const theme = function () {
+    const storageKey = 'theme-preference';
+    const urlParams = new URLSearchParams(window.location.search);
+    var storage;
+    var theme;
+    function init(givenStorage) {
+        storage = givenStorage;
+        theme = { value: getPreference() };
+        document.body.setAttribute('data-theme', theme.value);
+        reflectPreference();
+        window.matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', ({matches:isDark}) => {
+                theme.value = isDark ? 'dark' : 'light';
+                setPreference();
+            });
+        window.addEventListener('storage', ({key, newValue}) => {
+            if (key === storage.fullKey(storageKey)) {
+                theme.value = newValue === 'dark' ? 'dark' : 'light';
+                setPreference();
+            }
+        });
+    }
+    function getPreference() {
+        if (urlParams.has('theme')) {
+            var urlTheme = urlParams.get('theme') === 'dark' ? 'dark' : 'light';
+            storage.set(storageKey, urlTheme);
+            urlParams.delete('theme');
+            return urlTheme;
+        }
+        if (storage.get(storageKey))
+            return storage.get(storageKey) === 'dark' ? 'dark' : 'light';
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function setPreference() {
+        storage.set(storageKey, theme.value);
+        reflectPreference();
+    }
+    function reflectPreference() {
+        document.body.setAttribute('data-theme', theme.value);
+        document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value);
+        const event = new Event('theme-change', {value: theme.value});
+        document.dispatchEvent(event);
+    }
+    function onClick() {
+        theme.value = theme.value === 'light' ? 'dark' : 'light';
+        document.body.setAttribute('theme-toggled', "");
+        setPreference();
+    }
+    return {init: init, getPreference: getPreference, setPreference: setPreference,
+        reflectPreference: reflectPreference, onClick: onClick};
+}();
+</script>
+<script type="text/javascript">
+storage = function () {
+    var prefix = 'robot-framework-';
+    var storage;
+    function init(user) {
+        if (user)
+            prefix += user + '-';
+        storage = getStorage();
+    }
+    function getStorage() {
+        // Use localStorage if it's accessible, normal object otherwise.
+        // Inspired by https://stackoverflow.com/questions/11214404
+        try {
+            localStorage.setItem(prefix, prefix);
+            localStorage.removeItem(prefix);
+            return localStorage;
+        } catch (exception) {
+            return {};
+        }
+    }
+    function get(key, defaultValue) {
+        var value = storage[fullKey(key)];
+        if (typeof value === 'undefined')
+            return defaultValue;
+        return value;
+    }
+    function set(key, value) {
+        storage[fullKey(key)] = value;
+    }
+    function fullKey(key) {
+        return prefix + key;
+    }
+    return {init: init, get: get, set: set, fullKey: fullKey};
+}();
 </script>
 <script type="text/javascript">
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,0,[],[1,0,10374],[],[[1,0,0,[],[1,135,10238],[[0,4,5,0,0,0,0,0,[1,146,2418],[[0,6,7,0,8,9,0,0,[1,146,2085],[[147,2,10]]],[0,11,7,0,12,0,0,0,[1,2232,331],[]],[0,13,14,0,15,16,0,0,[1,2564,0],[]]]],[0,17,0,0,0,0,0,0,[1,2565,3441],[[0,18,19,0,0,20,0,0,[1,2565,3441],[[0,13,14,0,15,21,0,0,[1,2567,0],[]],[0,22,7,0,23,24,0,0,[1,2567,51],[]],[0,25,7,0,26,24,0,0,[1,2618,17],[]],[0,27,7,0,28,29,0,0,[1,2635,3371],[[2636,2,30]]]]]]],[0,31,0,0,0,0,0,0,[1,6007,1927],[[0,32,7,0,33,34,0,0,[1,6007,108],[[6007,2,35]]],[0,32,7,0,33,36,0,0,[1,6115,51],[[6115,2,37]]],[0,38,7,0,39,40,0,0,[1,6166,82],[[6166,2,41]]],[0,32,7,0,33,42,0,0,[1,6248,44],[[6249,2,43]]],[0,18,19,0,0,44,0,0,[1,6292,88],[[0,13,14,0,15,21,0,0,[1,6293,0],[]],[0,22,7,0,23,24,0,0,[1,6294,20],[]],[0,25,7,0,26,24,0,0,[1,6314,17],[]],[0,27,7,0,28,29,0,0,[1,6332,48],[[6332,2,45]]]]],[0,25,7,0,26,46,0,0,[1,6381,1249],[]],[0,47,7,0,48,49,0,0,[1,7630,165],[[7631,2,50]]],[0,47,7,0,48,51,0,0,[1,7795,55],[[7795,2,52]]],[0,47,7,0,48,53,0,0,[1,7850,84],[[7851,2,54]]]]],[0,55,0,0,0,0,0,0,[1,7934,77],[[0,18,19,0,0,56,0,0,[1,7935,76],[[0,13,14,0,15,21,0,0,[1,7935,0],[]],[0,22,7,0,23,24,0,0,[1,7935,19],[]],[0,25,7,0,26,24,0,0,[1,7955,11],[]],[0,27,7,0,28,29,0,0,[1,7966,45],[[7967,2,57]]]]]]],[0,58,0,0,0,0,0,0,[1,8011,1928],[[0,25,7,0,26,59,0,0,[1,8012,1926],[]],[0,13,14,0,15,60,0,0,[1,9938,1],[]]]],[2,61,7,0,62,0,0,0,[1,9940,432],[]]]]],[],[1,1,0,0]];
+window.output["suite"] = [1,2,3,0,[],[1,0,187961],[[4,5,6,0,[],[1,17,155197],[],[[7,0,0,[8],[1,165,155049],[[1,9,10,0,0,0,0,0,[1,166,8691],[[0,11,10,0,0,0,0,0,[1,174,2724],[[0,12,13,0,14,15,0,0,[1,175,2392],[[175,3,17],[176,2,18]]],[0,19,13,0,20,0,0,0,[1,2568,330],[]],[0,21,22,0,23,24,0,0,[1,2898,0],[]]]],[0,25,26,0,0,27,0,0,[1,2898,4139],[[0,21,22,0,23,28,0,0,[1,2899,0],[]],[0,29,13,0,30,31,0,0,[1,2899,659],[]],[0,32,13,0,33,31,0,0,[1,3559,11],[]],[0,34,13,0,35,36,0,0,[1,3570,3467],[[3571,2,37]]]]],[0,32,13,0,33,38,0,0,[1,7037,16],[]],[0,39,13,0,40,41,0,0,[1,7054,135],[[7054,2,42]]],[0,34,13,0,35,43,0,0,[1,7189,44],[[7189,2,44]]],[0,34,13,0,35,45,0,0,[1,7234,1072],[[7234,2,46]]],[0,32,13,0,33,47,0,0,[1,8306,19],[]],[0,39,13,0,40,48,0,0,[1,8325,41],[[8326,2,49]]],[0,25,26,0,0,50,0,0,[1,8366,490],[[0,21,22,0,23,28,0,0,[1,8367,0],[]],[0,29,13,0,30,31,0,0,[1,8367,16],[]],[0,32,13,0,33,31,0,0,[1,8383,9],[]],[0,34,13,0,35,36,0,0,[1,8393,463],[[8393,2,46]]]]],[0,21,22,0,23,51,0,0,[1,8857,0],[]]]],[0,52,0,0,53,0,0,0,[1,8858,2115],[[0,29,13,0,30,54,0,0,[1,8858,1447],[]],[0,39,13,0,40,55,0,0,[1,10305,177],[[10306,2,56]]],[0,57,13,0,58,59,0,0,[1,10483,490],[[10483,2,60],[10839,2,61],[10839,2,62]]]]],[0,63,0,0,64,0,0,0,[1,10974,5036],[[0,65,22,0,66,67,0,0,[1,10975,4015],[[14987,2,68]]],[0,69,22,0,70,71,0,0,[1,14992,673],[[0,72,13,0,73,74,0,0,[1,14995,669],[]]]],[0,75,13,0,76,77,78,0,[1,15665,13],[[15678,2,79]]],[0,75,13,0,76,80,81,0,[1,15678,13],[[15692,2,82]]],[0,83,13,0,84,77,85,0,[1,15692,9],[[15701,2,86]]],[0,21,22,0,23,87,0,0,[1,15701,0],[]],[3,88,0,0,0,0,0,0,[1,15701,173],[[4,89,0,0,0,0,0,0,[1,15702,63],[[0,90,13,0,91,92,93,0,[1,15702,61],[[15763,2,94]]],[0,95,96,0,97,93,98,0,[1,15764,0],[[15764,2,99]]],[0,100,101,0,102,103,0,0,[1,15764,0],[]]]],[4,104,0,0,0,0,0,0,[1,15765,11],[[0,90,13,0,91,92,93,0,[1,15765,9],[[15774,2,105]]],[0,95,96,0,97,93,98,0,[1,15775,0],[[15775,2,106]]],[0,100,101,0,102,103,0,0,[1,15775,0],[]]]],[4,107,0,0,0,0,0,0,[1,15776,12],[[0,90,13,0,91,92,93,0,[1,15776,11],[[15787,2,108]]],[0,95,96,0,97,93,98,0,[1,15787,0],[[15788,2,109]]],[0,100,101,0,102,103,0,0,[1,15788,0],[]]]],[4,110,0,0,0,0,0,0,[1,15788,9],[[0,90,13,0,91,92,93,0,[1,15788,7],[[15796,2,111]]],[0,95,96,0,97,93,98,0,[1,15796,1],[[15797,2,112]]],[0,100,101,0,102,103,0,0,[1,15797,0],[]]]],[4,113,0,0,0,0,0,0,[1,15797,8],[[0,90,13,0,91,92,93,0,[1,15797,7],[[15805,2,114]]],[0,95,96,0,97,93,98,0,[1,15805,0],[[15805,2,115]]],[0,100,101,0,102,103,0,0,[1,15805,0],[]]]],[4,116,0,0,0,0,0,0,[1,15806,9],[[0,90,13,0,91,92,93,0,[1,15806,8],[[15814,2,117]]],[0,95,96,0,97,93,98,0,[1,15814,0],[[15815,2,118]]],[0,100,101,0,102,103,0,0,[1,15815,0],[]]]],[4,119,0,0,0,0,0,0,[1,15815,9],[[0,90,13,0,91,92,93,0,[1,15815,7],[[15822,2,120]]],[0,95,96,0,97,93,98,0,[1,15823,1],[[15824,2,121]]],[0,100,101,0,102,103,0,0,[1,15824,0],[]]]],[4,122,0,0,0,0,0,0,[1,15824,17],[[0,90,13,0,91,92,93,0,[1,15825,15],[[15840,2,123]]],[0,95,96,0,97,93,98,0,[1,15841,1],[[15841,2,124]]],[0,100,101,0,102,103,0,0,[1,15841,0],[]]]],[4,125,0,0,0,0,0,0,[1,15842,11],[[0,90,13,0,91,92,93,0,[1,15843,9],[[15852,2,126]]],[0,95,96,0,97,93,98,0,[1,15852,0],[[15852,2,127]]],[0,100,101,0,102,103,0,0,[1,15852,0],[]]]],[4,128,0,0,0,0,0,0,[1,15853,7],[[0,90,13,0,91,92,93,0,[1,15853,6],[[15859,2,129]]],[0,95,96,0,97,93,98,0,[1,15859,0],[[15859,2,130]]],[0,100,101,0,102,103,0,0,[1,15860,0],[]]]],[4,131,0,0,0,0,0,0,[1,15860,7],[[0,90,13,0,91,92,93,0,[1,15860,6],[[15866,2,132]]],[0,95,96,0,97,93,98,0,[1,15866,0],[[15867,2,133]]],[0,100,101,0,102,103,0,0,[1,15867,0],[]]]],[4,134,0,0,0,0,0,0,[1,15867,8],[[0,90,13,0,91,92,93,0,[1,15867,7],[[15874,2,135]]],[0,95,96,0,97,93,98,0,[1,15874,0],[[15874,2,136]]],[0,100,101,0,102,103,0,0,[1,15874,0],[]]]]]],[0,21,22,0,23,137,0,0,[1,15875,0],[]],[3,138,0,0,0,0,0,0,[1,15875,109],[[4,139,0,0,0,0,0,0,[1,15875,9],[[0,90,13,0,91,140,93,0,[1,15876,8],[[15883,2,141]]],[0,95,96,0,97,93,98,0,[1,15883,0],[[15884,2,142]]],[0,100,101,0,102,143,0,0,[1,15884,0],[]]]],[4,144,0,0,0,0,0,0,[1,15884,9],[[0,90,13,0,91,140,93,0,[1,15884,8],[[15892,2,145]]],[0,95,96,0,97,93,98,0,[1,15893,0],[[15893,2,146]]],[0,100,101,0,102,143,0,0,[1,15893,0],[]]]],[4,147,0,0,0,0,0,0,[1,15894,8],[[0,90,13,0,91,140,93,0,[1,15894,7],[[15901,2,141]]],[0,95,96,0,97,93,98,0,[1,15901,0],[[15901,2,142]]],[0,100,101,0,102,143,0,0,[1,15901,0],[]]]],[4,148,0,0,0,0,0,0,[1,15902,7],[[0,90,13,0,91,140,93,0,[1,15902,6],[[15908,2,141]]],[0,95,96,0,97,93,98,0,[1,15909,0],[[15909,2,142]]],[0,100,101,0,102,143,0,0,[1,15909,0],[]]]],[4,149,0,0,0,0,0,0,[1,15909,14],[[0,90,13,0,91,140,93,0,[1,15909,13],[[15922,2,141]]],[0,95,96,0,97,93,98,0,[1,15923,0],[[15923,2,142]]],[0,100,101,0,102,143,0,0,[1,15923,0],[]]]],[4,150,0,0,0,0,0,0,[1,15923,9],[[0,90,13,0,91,140,93,0,[1,15923,7],[[15931,2,141]]],[0,95,96,0,97,93,98,0,[1,15931,1],[[15932,2,142]]],[0,100,101,0,102,143,0,0,[1,15932,1],[]]]],[4,151,0,0,0,0,0,0,[1,15933,8],[[0,90,13,0,91,140,93,0,[1,15933,7],[[15940,2,141]]],[0,95,96,0,97,93,98,0,[1,15940,0],[[15941,2,142]]],[0,100,101,0,102,143,0,0,[1,15941,0],[]]]],[4,152,0,0,0,0,0,0,[1,15942,8],[[0,90,13,0,91,140,93,0,[1,15943,7],[[15949,2,141]]],[0,95,96,0,97,93,98,0,[1,15950,0],[[15950,2,142]]],[0,100,101,0,102,143,0,0,[1,15950,0],[]]]],[4,153,0,0,0,0,0,0,[1,15950,9],[[0,90,13,0,91,140,93,0,[1,15950,8],[[15958,2,141]]],[0,95,96,0,97,93,98,0,[1,15958,0],[[15959,2,142]]],[0,100,101,0,102,143,0,0,[1,15959,0],[]]]],[4,154,0,0,0,0,0,0,[1,15959,10],[[0,90,13,0,91,140,93,0,[1,15959,9],[[15968,2,141]]],[0,95,96,0,97,93,98,0,[1,15968,0],[[15968,2,142]]],[0,100,101,0,102,143,0,0,[1,15969,0],[]]]],[4,155,0,0,0,0,0,0,[1,15969,7],[[0,90,13,0,91,140,93,0,[1,15969,6],[[15975,2,141]]],[0,95,96,0,97,93,98,0,[1,15975,0],[[15976,2,142]]],[0,100,101,0,102,143,0,0,[1,15976,0],[]]]],[4,156,0,0,0,0,0,0,[1,15976,7],[[0,90,13,0,91,140,93,0,[1,15976,7],[[15983,2,141]]],[0,95,96,0,97,93,98,0,[1,15983,0],[[15983,2,142]]],[0,100,101,0,102,143,0,0,[1,15983,0],[]]]]]],[0,157,22,0,158,137,159,0,[1,15984,0],[[15984,2,160],[15984,2,161]]],[3,162,0,0,0,0,0,0,[1,15984,26],[[4,163,0,0,0,0,0,0,[1,15984,2],[[0,164,101,0,165,166,167,0,[1,15985,0],[[15985,2,168]]],[0,164,101,0,165,169,170,0,[1,15985,0],[[15985,2,171]]],[5,172,0,0,0,0,0,0,[1,15985,1],[[0,21,22,0,23,173,0,0,[1,15986,0],[]]]],[7,0,0,0,0,0,0,0,[3,15986,0],[[0,174,22,0,175,176,0,0,[3,15986,0],[]]]]]],[4,177,0,0,0,0,0,0,[1,15986,1],[[0,164,101,0,165,166,167,0,[1,15986,0],[[15987,2,178]]],[0,164,101,0,165,169,170,0,[1,15987,0],[[15987,2,179]]],[5,172,0,0,0,0,0,0,[1,15987,0],[[0,21,22,0,23,173,0,0,[1,15987,0],[]]]],[7,0,0,0,0,0,0,0,[3,15988,0],[[0,174,22,0,175,176,0,0,[3,15988,0],[]]]]]],[4,180,0,0,0,0,0,0,[1,15988,1],[[0,164,101,0,165,166,167,0,[1,15988,0],[[15988,2,181]]],[0,164,101,0,165,169,170,0,[1,15988,0],[[15989,2,171]]],[5,172,0,0,0,0,0,0,[1,15989,0],[[0,21,22,0,23,173,0,0,[1,15989,0],[]]]],[7,0,0,0,0,0,0,0,[3,15989,0],[[0,174,22,0,175,176,0,0,[3,15989,0],[]]]]]],[4,182,0,0,0,0,0,0,[1,15990,2],[[0,164,101,0,165,166,167,0,[1,15990,0],[[15990,2,183]]],[0,164,101,0,165,169,170,0,[1,15990,1],[[15991,2,171]]],[5,172,0,0,0,0,0,0,[1,15991,1],[[0,21,22,0,23,173,0,0,[1,15991,0],[]]]],[7,0,0,0,0,0,0,0,[3,15991,0],[[0,174,22,0,175,176,0,0,[3,15992,0],[]]]]]],[4,184,0,0,0,0,0,0,[1,15992,2],[[0,164,101,0,165,166,167,0,[1,15992,0],[[15993,2,185]]],[0,164,101,0,165,169,170,0,[1,15993,0],[[15993,2,171]]],[5,172,0,0,0,0,0,0,[1,15993,1],[[0,21,22,0,23,173,0,0,[1,15993,0],[]]]],[7,0,0,0,0,0,0,0,[3,15994,0],[[0,174,22,0,175,176,0,0,[3,15994,0],[]]]]]],[4,186,0,0,0,0,0,0,[1,15994,2],[[0,164,101,0,165,166,167,0,[1,15994,0],[[15994,2,187]]],[0,164,101,0,165,169,170,0,[1,15995,0],[[15995,2,171]]],[5,172,0,0,0,0,0,0,[1,15995,1],[[0,21,22,0,23,173,0,0,[1,15995,1],[]]]],[7,0,0,0,0,0,0,0,[3,15996,0],[[0,174,22,0,175,176,0,0,[3,15996,0],[]]]]]],[4,188,0,0,0,0,0,0,[1,15997,4],[[0,164,101,0,165,166,167,0,[1,15997,1],[[15997,2,189]]],[0,164,101,0,165,169,170,0,[1,15998,1],[[15999,2,171]]],[5,172,0,0,0,0,0,0,[1,15999,1],[[0,21,22,0,23,173,0,0,[1,16000,0],[]]]],[7,0,0,0,0,0,0,0,[3,16001,0],[[0,174,22,0,175,176,0,0,[3,16001,0],[]]]]]],[4,190,0,0,0,0,0,0,[1,16001,2],[[0,164,101,0,165,166,167,0,[1,16001,0],[[16001,2,191]]],[0,164,101,0,165,169,170,0,[1,16001,0],[[16002,2,171]]],[5,172,0,0,0,0,0,0,[1,16002,0],[[0,21,22,0,23,173,0,0,[1,16002,0],[]]]],[7,0,0,0,0,0,0,0,[3,16002,0],[[0,174,22,0,175,176,0,0,[3,16002,0],[]]]]]],[4,192,0,0,0,0,0,0,[1,16003,1],[[0,164,101,0,165,166,167,0,[1,16003,0],[[16003,2,193]]],[0,164,101,0,165,169,170,0,[1,16003,0],[[16003,2,171]]],[5,172,0,0,0,0,0,0,[1,16003,0],[[0,21,22,0,23,173,0,0,[1,16004,0],[]]]],[7,0,0,0,0,0,0,0,[3,16004,0],[[0,174,22,0,175,176,0,0,[3,16004,0],[]]]]]],[4,194,0,0,0,0,0,0,[1,16004,2],[[0,164,101,0,165,166,167,0,[1,16004,0],[[16005,2,195]]],[0,164,101,0,165,169,170,0,[1,16005,0],[[16005,2,171]]],[5,172,0,0,0,0,0,0,[1,16005,0],[[0,21,22,0,23,173,0,0,[1,16005,0],[]]]],[7,0,0,0,0,0,0,0,[3,16005,0],[[0,174,22,0,175,176,0,0,[3,16006,0],[]]]]]],[4,196,0,0,0,0,0,0,[1,16006,3],[[0,164,101,0,165,166,167,0,[1,16006,0],[[16006,2,197]]],[0,164,101,0,165,169,170,0,[1,16007,0],[[16007,2,171]]],[5,172,0,0,0,0,0,0,[1,16007,1],[[0,21,22,0,23,173,0,0,[1,16008,0],[]]]],[7,0,0,0,0,0,0,0,[3,16008,0],[[0,174,22,0,175,176,0,0,[3,16009,0],[]]]]]],[4,198,0,0,0,0,0,0,[1,16009,2],[[0,164,101,0,165,166,167,0,[1,16009,0],[[16009,2,199]]],[0,164,101,0,165,169,170,0,[1,16009,0],[[16010,2,171]]],[5,172,0,0,0,0,0,0,[1,16010,0],[[0,21,22,0,23,173,0,0,[1,16010,0],[]]]],[7,0,0,0,0,0,0,0,[3,16010,0],[[0,174,22,0,175,176,0,0,[3,16010,0],[]]]]]]]]]],[0,200,0,0,201,0,0,0,[1,16011,138649],[[0,65,22,0,66,67,0,0,[1,16011,4001],[[20012,2,68]]],[0,69,22,0,70,71,0,0,[1,20013,292],[[0,72,13,0,73,74,0,0,[1,20013,290],[]]]],[0,75,13,0,76,77,202,0,[1,20305,8],[[20312,2,203]]],[3,204,0,0,0,0,0,0,[1,20312,134348],[[4,89,0,0,0,0,0,0,[1,20313,10657],[[0,69,22,0,70,205,0,0,[1,20313,274],[[0,72,13,0,73,92,0,0,[1,20313,273],[]]]],[0,206,0,0,207,92,0,0,[1,20587,10383],[[0,90,13,0,91,92,208,0,[1,20587,6],[[20594,2,209]]],[0,210,13,0,211,0,212,0,[1,20594,2],[[20596,2,213]]],[0,214,22,0,215,216,212,0,[1,20596,0],[[20597,2,217]]],[0,218,13,0,219,220,221,0,[1,20597,6],[[20602,2,222]]],[0,223,13,0,224,225,0,0,[1,20603,49],[[20603,2,226]]],[0,65,22,0,66,227,0,0,[1,20652,5002],[[25654,2,228]]],[0,210,13,0,211,0,229,0,[1,25655,19],[[25674,2,230]]],[0,231,13,0,232,233,0,0,[1,25674,75],[]],[0,32,13,0,33,234,0,0,[1,25750,41],[]],[0,235,13,0,236,0,0,0,[1,25792,69],[]],[0,65,22,0,66,227,0,0,[1,25862,5003],[[30864,2,228]]],[0,231,13,0,232,212,0,0,[1,30866,16],[]],[0,237,22,0,238,239,0,0,[1,30883,86],[[0,34,13,0,35,240,0,0,[1,30883,86],[[30884,2,241]]]]]]]]],[4,104,0,0,0,0,0,0,[1,30970,11280],[[0,69,22,0,70,205,0,0,[1,30970,271],[[0,72,13,0,73,92,0,0,[1,30970,270],[]]]],[0,206,0,0,207,92,0,0,[1,31242,11007],[[0,90,13,0,91,92,208,0,[1,31243,13],[[31256,2,242]]],[0,210,13,0,211,0,212,0,[1,31256,3],[[31259,2,213]]],[0,214,22,0,215,216,212,0,[1,31259,0],[[31259,2,217]]],[0,218,13,0,219,220,221,0,[1,31260,6],[[31265,2,243]]],[0,223,13,0,224,225,0,0,[1,31266,42],[[31266,2,244]]],[0,65,22,0,66,227,0,0,[1,31307,5006],[[36313,2,228]]],[0,210,13,0,211,0,229,0,[1,36314,27],[[36342,2,245]]],[0,231,13,0,232,233,0,0,[1,36342,73],[]],[0,32,13,0,33,234,0,0,[1,36415,46],[]],[0,235,13,0,236,0,0,0,[1,36461,66],[]],[0,65,22,0,66,227,0,0,[1,36528,5003],[[41530,2,228]]],[0,231,13,0,232,212,0,0,[1,41531,21],[]],[0,237,22,0,238,239,0,0,[1,41552,697],[[0,34,13,0,35,240,0,0,[0,41553,696],[[41553,2,241],[42242,2,246],[42242,5,247]]]]]]]]],[4,107,0,0,0,0,0,0,[1,42249,11224],[[0,69,22,0,70,205,0,0,[1,42249,266],[[0,72,13,0,73,92,0,0,[1,42250,264],[]]]],[0,206,0,0,207,92,0,0,[1,42517,10957],[[0,90,13,0,91,92,208,0,[1,42518,12],[[42530,2,248]]],[0,210,13,0,211,0,212,0,[1,42530,3],[[42533,2,213]]],[0,214,22,0,215,216,212,0,[1,42533,0],[[42533,2,217]]],[0,218,13,0,219,220,221,0,[1,42534,6],[[42539,2,249]]],[0,223,13,0,224,225,0,0,[1,42540,38],[[42540,2,250]]],[0,65,22,0,66,227,0,0,[1,42578,5001],[[47579,2,228]]],[0,210,13,0,211,0,229,0,[1,47579,25],[[47604,2,251]]],[0,231,13,0,232,233,0,0,[1,47604,92],[]],[0,32,13,0,33,234,0,0,[1,47696,22],[]],[0,235,13,0,236,0,0,0,[1,47719,69],[]],[0,65,22,0,66,227,0,0,[1,47789,5001],[[52790,2,228]]],[0,231,13,0,232,212,0,0,[1,52791,16],[]],[0,237,22,0,238,239,0,0,[1,52807,666],[[0,34,13,0,35,240,0,0,[0,52808,666],[[52808,2,241],[53473,2,252],[53473,5,247]]]]]]]]],[4,110,0,0,0,0,0,0,[1,53474,11244],[[0,69,22,0,70,205,0,0,[1,53474,264],[[0,72,13,0,73,92,0,0,[1,53474,263],[]]]],[0,206,0,0,207,92,0,0,[1,53738,10980],[[0,90,13,0,91,92,208,0,[1,53738,10],[[53749,2,253]]],[0,210,13,0,211,0,212,0,[1,53749,3],[[53751,2,213]]],[0,214,22,0,215,216,212,0,[1,53752,0],[[53752,2,217]]],[0,218,13,0,219,220,221,0,[1,53752,6],[[53758,2,254]]],[0,223,13,0,224,225,0,0,[1,53758,34],[[53758,2,255]]],[0,65,22,0,66,227,0,0,[1,53792,5004],[[58794,2,228]]],[0,210,13,0,211,0,229,0,[1,58797,27],[[58824,2,256]]],[0,231,13,0,232,233,0,0,[1,58824,105],[]],[0,32,13,0,33,234,0,0,[1,58929,37],[]],[0,235,13,0,236,0,0,0,[1,58967,69],[]],[0,65,22,0,66,227,0,0,[1,59036,5003],[[64038,2,228]]],[0,231,13,0,232,212,0,0,[1,64039,12],[]],[0,237,22,0,238,239,0,0,[1,64052,666],[[0,34,13,0,35,240,0,0,[0,64052,665],[[64052,2,241],[64717,2,257],[64717,5,247]]]]]]]]],[4,113,0,0,0,0,0,0,[1,64718,11205],[[0,69,22,0,70,205,0,0,[1,64718,260],[[0,72,13,0,73,92,0,0,[1,64718,259],[]]]],[0,206,0,0,207,92,0,0,[1,64978,10945],[[0,90,13,0,91,92,208,0,[1,64979,11],[[64990,2,258]]],[0,210,13,0,211,0,212,0,[1,64991,3],[[64993,2,213]]],[0,214,22,0,215,216,212,0,[1,64993,0],[[64994,2,217]]],[0,218,13,0,219,220,221,0,[1,64994,6],[[64999,2,259]]],[0,223,13,0,224,225,0,0,[1,65000,31],[[65000,2,260]]],[0,65,22,0,66,227,0,0,[1,65032,5003],[[70033,2,228]]],[0,210,13,0,211,0,229,0,[1,70036,31],[[70067,2,261]]],[0,231,13,0,232,233,0,0,[1,70067,69],[]],[0,32,13,0,33,234,0,0,[1,70136,28],[]],[0,235,13,0,236,0,0,0,[1,70165,69],[]],[0,65,22,0,66,227,0,0,[1,70234,5001],[[75235,2,228]]],[0,231,13,0,232,212,0,0,[1,75237,15],[]],[0,237,22,0,238,239,0,0,[1,75252,670],[[0,34,13,0,35,240,0,0,[0,75253,670],[[75253,2,241],[75922,2,262],[75922,5,247]]]]]]]]],[4,116,0,0,0,0,0,0,[1,75923,11217],[[0,69,22,0,70,205,0,0,[1,75923,263],[[0,72,13,0,73,92,0,0,[1,75923,262],[]]]],[0,206,0,0,207,92,0,0,[1,76186,10954],[[0,90,13,0,91,92,208,0,[1,76187,8],[[76195,2,263]]],[0,210,13,0,211,0,212,0,[1,76195,2],[[76197,2,213]]],[0,214,22,0,215,216,212,0,[1,76198,0],[[76198,2,217]]],[0,218,13,0,219,220,221,0,[1,76198,6],[[76204,2,264]]],[0,223,13,0,224,225,0,0,[1,76204,30],[[76205,2,265]]],[0,65,22,0,66,227,0,0,[1,76235,5002],[[81236,2,228]]],[0,210,13,0,211,0,229,0,[1,81237,16],[[81253,2,266]]],[0,231,13,0,232,233,0,0,[1,81253,80],[]],[0,32,13,0,33,234,0,0,[1,81334,27],[]],[0,235,13,0,236,0,0,0,[1,81362,88],[]],[0,65,22,0,66,227,0,0,[1,81450,5002],[[86452,2,228]]],[0,231,13,0,232,212,0,0,[1,86453,13],[]],[0,237,22,0,238,239,0,0,[1,86466,674],[[0,34,13,0,35,240,0,0,[0,86466,674],[[86466,2,241],[87140,2,267],[87140,5,247]]]]]]]]],[4,119,0,0,0,0,0,0,[1,87140,11251],[[0,69,22,0,70,205,0,0,[1,87141,261],[[0,72,13,0,73,92,0,0,[1,87141,260],[]]]],[0,206,0,0,207,92,0,0,[1,87402,10989],[[0,90,13,0,91,92,208,0,[1,87402,8],[[87410,2,268]]],[0,210,13,0,211,0,212,0,[1,87411,3],[[87414,2,213]]],[0,214,22,0,215,216,212,0,[1,87414,0],[[87414,2,217]]],[0,218,13,0,219,220,221,0,[1,87414,5],[[87420,2,269]]],[0,223,13,0,224,225,0,0,[1,87420,45],[[87421,2,270]]],[0,65,22,0,66,227,0,0,[1,87465,5004],[[92468,2,228]]],[0,210,13,0,211,0,229,0,[1,92471,26],[[92497,2,271]]],[0,231,13,0,232,233,0,0,[1,92497,71],[]],[0,32,13,0,33,234,0,0,[1,92569,30],[]],[0,235,13,0,236,0,0,0,[1,92599,71],[]],[0,65,22,0,66,227,0,0,[1,92670,5001],[[97671,2,228]]],[0,231,13,0,232,212,0,0,[1,97673,16],[]],[0,237,22,0,238,239,0,0,[1,97689,702],[[0,34,13,0,35,240,0,0,[0,97690,701],[[97690,2,241],[98390,2,272],[98391,5,247]]]]]]]]],[4,122,0,0,0,0,0,0,[1,98391,11230],[[0,69,22,0,70,205,0,0,[1,98391,263],[[0,72,13,0,73,92,0,0,[1,98392,263],[]]]],[0,206,0,0,207,92,0,0,[1,98655,10966],[[0,90,13,0,91,92,208,0,[1,98655,6],[[98662,2,273]]],[0,210,13,0,211,0,212,0,[1,98662,2],[[98664,2,213]]],[0,214,22,0,215,216,212,0,[1,98664,0],[[98664,2,217]]],[0,218,13,0,219,220,221,0,[1,98664,4],[[98668,2,274]]],[0,223,13,0,224,225,0,0,[1,98668,34],[[98669,2,275]]],[0,65,22,0,66,227,0,0,[1,98702,5004],[[103706,2,228]]],[0,210,13,0,211,0,229,0,[1,103707,26],[[103733,2,276]]],[0,231,13,0,232,233,0,0,[1,103733,57],[]],[0,32,13,0,33,234,0,0,[1,103794,21],[]],[0,235,13,0,236,0,0,0,[1,103816,84],[]],[0,65,22,0,66,227,0,0,[1,103901,5002],[[108902,2,228]]],[0,231,13,0,232,212,0,0,[1,108903,17],[]],[0,237,22,0,238,239,0,0,[1,108921,700],[[0,34,13,0,35,240,0,0,[0,108921,699],[[108922,2,241],[109620,2,277],[109620,5,247]]]]]]]]],[4,125,0,0,0,0,0,0,[1,109621,11265],[[0,69,22,0,70,205,0,0,[1,109621,264],[[0,72,13,0,73,92,0,0,[1,109622,263],[]]]],[0,206,0,0,207,92,0,0,[1,109886,10999],[[0,90,13,0,91,92,208,0,[1,109886,9],[[109895,2,278]]],[0,210,13,0,211,0,212,0,[1,109895,2],[[109897,2,213]]],[0,214,22,0,215,216,212,0,[1,109897,0],[[109897,2,217]]],[0,218,13,0,219,220,221,0,[1,109897,4],[[109901,2,279]]],[0,223,13,0,224,225,0,0,[1,109902,34],[[109902,2,280]]],[0,65,22,0,66,227,0,0,[1,109936,5003],[[114938,2,228]]],[0,210,13,0,211,0,229,0,[1,114940,30],[[114970,2,281]]],[0,231,13,0,232,233,0,0,[1,114970,91],[]],[0,32,13,0,33,234,0,0,[1,115062,32],[]],[0,235,13,0,236,0,0,0,[1,115094,63],[]],[0,65,22,0,66,227,0,0,[1,115158,5003],[[120160,2,228]]],[0,231,13,0,232,212,0,0,[1,120161,13],[]],[0,237,22,0,238,239,0,0,[1,120175,709],[[0,34,13,0,35,240,0,0,[0,120176,709],[[120176,2,241],[120884,2,282],[120884,5,247]]]]]]]]],[4,128,0,0,0,0,0,0,[1,120887,11217],[[0,69,22,0,70,205,0,0,[1,120887,266],[[0,72,13,0,73,92,0,0,[1,120887,265],[]]]],[0,206,0,0,207,92,0,0,[1,121153,10951],[[0,90,13,0,91,92,208,0,[1,121153,6],[[121160,2,283]]],[0,210,13,0,211,0,212,0,[1,121160,2],[[121161,2,213]]],[0,214,22,0,215,216,212,0,[1,121162,0],[[121162,2,217]]],[0,218,13,0,219,220,221,0,[1,121162,4],[[121166,2,284]]],[0,223,13,0,224,225,0,0,[1,121167,35],[[121167,2,285]]],[0,65,22,0,66,227,0,0,[1,121202,5001],[[126202,2,228]]],[0,210,13,0,211,0,229,0,[1,126203,18],[[126221,2,286]]],[0,231,13,0,232,233,0,0,[1,126221,51],[]],[0,32,13,0,33,234,0,0,[1,126273,21],[]],[0,235,13,0,236,0,0,0,[1,126294,65],[]],[0,65,22,0,66,227,0,0,[1,126360,5004],[[131363,2,228]]],[0,231,13,0,232,212,0,0,[1,131364,16],[]],[0,237,22,0,238,239,0,0,[1,131380,723],[[0,34,13,0,35,240,0,0,[0,131380,723],[[131381,2,241],[132103,2,287],[132103,5,247]]]]]]]]],[4,131,0,0,0,0,0,0,[1,132104,11202],[[0,69,22,0,70,205,0,0,[1,132104,260],[[0,72,13,0,73,92,0,0,[1,132104,260],[]]]],[0,206,0,0,207,92,0,0,[1,132365,10941],[[0,90,13,0,91,92,208,0,[1,132365,8],[[132373,2,288]]],[0,210,13,0,211,0,212,0,[1,132373,2],[[132375,2,213]]],[0,214,22,0,215,216,212,0,[1,132375,0],[[132376,2,217]]],[0,218,13,0,219,220,221,0,[1,132376,5],[[132380,2,289]]],[0,223,13,0,224,225,0,0,[1,132382,33],[[132382,2,290]]],[0,65,22,0,66,227,0,0,[1,132415,5002],[[137416,2,228]]],[0,210,13,0,211,0,229,0,[1,137417,19],[[137436,2,291]]],[0,231,13,0,232,233,0,0,[1,137436,53],[]],[0,32,13,0,33,234,0,0,[1,137490,24],[]],[0,235,13,0,236,0,0,0,[1,137515,71],[]],[0,65,22,0,66,227,0,0,[1,137586,5001],[[142586,2,228]]],[0,231,13,0,232,212,0,0,[1,142587,13],[]],[0,237,22,0,238,239,0,0,[1,142601,705],[[0,34,13,0,35,240,0,0,[0,142601,704],[[142601,2,241],[143305,2,292],[143305,5,247]]]]]]]]],[4,134,0,0,0,0,0,0,[1,143306,11354],[[0,69,22,0,70,205,0,0,[1,143306,261],[[0,72,13,0,73,92,0,0,[1,143306,260],[]]]],[0,206,0,0,207,92,0,0,[1,143567,11093],[[0,90,13,0,91,92,208,0,[1,143568,7],[[143574,2,293]]],[0,210,13,0,211,0,212,0,[1,143575,2],[[143577,2,213]]],[0,214,22,0,215,216,212,0,[1,143577,0],[[143577,2,217]]],[0,218,13,0,219,220,221,0,[1,143577,5],[[143582,2,294]]],[0,223,13,0,224,225,0,0,[1,143583,34],[[143583,2,295]]],[0,65,22,0,66,227,0,0,[1,143617,5004],[[148621,2,228]]],[0,210,13,0,211,0,229,0,[1,148623,29],[[148652,2,296]]],[0,231,13,0,232,233,0,0,[1,148653,139],[]],[0,32,13,0,33,234,0,0,[1,148792,39],[]],[0,235,13,0,236,0,0,0,[1,148830,79],[]],[0,65,22,0,66,227,0,0,[1,148910,5002],[[153912,2,228]]],[0,231,13,0,232,212,0,0,[1,153914,16],[]],[0,237,22,0,238,239,0,0,[1,153930,729],[[0,34,13,0,35,240,0,0,[0,153931,729],[[153931,2,241],[154659,2,297],[154659,5,247]]]]]]]]]]]]],[2,298,13,0,299,0,0,0,[1,154661,553],[]]]]],[],[1,1,0,0]],[300,301,302,0,[],[1,155215,23005],[],[[303,0,0,[8],[1,155219,23001],[[1,9,10,0,0,0,0,0,[1,155220,7440],[[0,11,10,0,0,0,0,0,[1,155221,2198],[[0,12,13,0,14,15,0,0,[1,155222,1650],[[155222,3,17],[155222,2,18]]],[0,19,13,0,20,0,0,0,[1,156872,547],[]],[0,21,22,0,23,24,0,0,[1,157419,0],[]]]],[0,25,26,0,0,27,0,0,[1,157420,3619],[[0,21,22,0,23,28,0,0,[1,157420,0],[]],[0,29,13,0,30,31,0,0,[1,157421,233],[]],[0,32,13,0,33,31,0,0,[1,157654,13],[]],[0,34,13,0,35,36,0,0,[1,157666,3373],[[157667,2,37]]]]],[0,32,13,0,33,38,0,0,[1,161039,16],[]],[0,39,13,0,40,41,0,0,[1,161055,139],[[161056,2,42]]],[0,34,13,0,35,43,0,0,[1,161194,42],[[161194,2,44]]],[0,34,13,0,35,45,0,0,[1,161236,56],[[161236,2,46]]],[0,32,13,0,33,47,0,0,[1,161292,1240],[[162308,2,305]]],[0,39,13,0,40,48,0,0,[1,162533,43],[[162533,2,49]]],[0,25,26,0,0,50,0,0,[1,162576,84],[[0,21,22,0,23,28,0,0,[1,162576,0],[]],[0,29,13,0,30,31,0,0,[1,162577,25],[]],[0,32,13,0,33,31,0,0,[1,162602,10],[]],[0,34,13,0,35,36,0,0,[1,162612,48],[[162612,2,46]]]]],[0,21,22,0,23,51,0,0,[1,162660,0],[]]]],[0,306,0,0,0,0,0,0,[1,162661,7989],[[0,25,26,0,0,307,0,0,[1,162661,2201],[[0,21,22,0,23,28,0,0,[1,162661,0],[]],[0,29,13,0,30,31,0,0,[1,162661,2113],[]],[0,32,13,0,33,31,0,0,[1,164775,13],[]],[0,34,13,0,35,36,0,0,[1,164788,73],[[164788,2,308]]]]],[0,65,22,0,66,309,0,0,[1,164862,2003],[[166864,2,310]]],[0,72,13,0,73,311,0,0,[1,166866,304],[]],[0,25,26,0,0,312,0,0,[1,167170,1312],[[0,21,22,0,23,28,0,0,[1,167171,0],[]],[0,29,13,0,30,31,0,0,[1,167171,26],[]],[0,32,13,0,33,31,0,0,[1,167197,12],[]],[0,34,13,0,35,36,0,0,[1,167209,1272],[[167209,2,313]]]]],[0,25,26,0,0,314,0,0,[1,168483,1719],[[0,21,22,0,23,28,0,0,[1,168485,1],[]],[0,29,13,0,30,31,0,0,[1,168486,1630],[]],[0,32,13,0,33,31,0,0,[1,170116,12],[]],[0,34,13,0,35,36,0,0,[1,170129,72],[[170129,2,315]]]]],[0,32,13,0,33,316,0,0,[1,170202,448],[]]]],[0,317,0,0,0,0,0,0,[1,170650,7309],[[0,9,10,0,0,0,0,0,[1,170651,7308],[[0,11,10,0,0,0,0,0,[1,170651,2095],[[0,12,13,0,14,15,0,0,[1,170651,1759],[[170651,3,17],[170652,2,18]]],[0,19,13,0,20,0,0,0,[1,172411,334],[]],[0,21,22,0,23,24,0,0,[1,172745,1],[]]]],[0,25,26,0,0,27,0,0,[1,172746,3423],[[0,21,22,0,23,28,0,0,[1,172746,0],[]],[0,29,13,0,30,31,0,0,[1,172747,29],[]],[0,32,13,0,33,31,0,0,[1,172776,12],[]],[0,34,13,0,35,36,0,0,[1,172788,3382],[[172788,2,37]]]]],[0,32,13,0,33,38,0,0,[1,176170,18],[]],[0,39,13,0,40,41,0,0,[1,176187,141],[[176188,2,42]]],[0,34,13,0,35,43,0,0,[1,176329,47],[[176329,2,44]]],[0,34,13,0,35,45,0,0,[1,176376,1014],[[176376,2,46]]],[0,32,13,0,33,47,0,0,[1,177391,19],[]],[0,39,13,0,40,48,0,0,[1,177410,46],[[177410,2,49]]],[0,25,26,0,0,50,0,0,[1,177457,502],[[0,21,22,0,23,28,0,0,[1,177457,0],[]],[0,29,13,0,30,31,0,0,[1,177458,26],[]],[0,32,13,0,33,31,0,0,[1,177484,11],[]],[0,34,13,0,35,36,0,0,[1,177495,463],[[177497,2,46]]]]],[0,21,22,0,23,51,0,0,[1,177958,0],[]]]]]],[2,298,13,0,299,0,0,0,[1,177959,260],[]]]]],[],[1,1,0,0]],[319,320,321,0,[],[1,178221,9739],[],[[319,0,0,[8],[1,178224,9735],[[0,11,10,0,0,0,0,0,[1,178225,1982],[[0,12,13,0,14,15,0,0,[1,178226,1383],[[178226,3,17],[178226,2,18]]],[0,19,13,0,20,0,0,0,[1,179610,597],[]],[0,21,22,0,23,24,0,0,[1,180207,0],[]]]],[0,323,0,0,0,0,0,0,[1,180208,3915],[[0,25,26,0,0,324,0,0,[1,180208,3915],[[0,21,22,0,23,28,0,0,[1,180208,0],[]],[0,29,13,0,30,31,0,0,[1,180209,445],[]],[0,32,13,0,33,31,0,0,[1,180654,16],[]],[0,34,13,0,35,36,0,0,[1,180670,3453],[[180670,2,325]]]]]]],[0,326,0,0,0,0,0,0,[1,184123,1880],[[0,327,13,0,328,329,0,0,[1,184123,30],[[184124,2,330]]],[0,327,13,0,328,331,0,0,[1,184154,47],[[184154,2,332]]],[0,333,13,0,334,335,0,0,[1,184201,79],[[184202,2,336]]],[0,327,13,0,328,337,0,0,[1,184281,42],[[184281,2,338]]],[0,25,26,0,0,339,0,0,[1,184323,78],[[0,21,22,0,23,28,0,0,[1,184323,0],[]],[0,29,13,0,30,31,0,0,[1,184324,19],[]],[0,32,13,0,33,31,0,0,[1,184342,13],[]],[0,34,13,0,35,36,0,0,[1,184355,46],[[184355,2,340]]]]],[0,32,13,0,33,341,0,0,[1,184402,1321],[]],[0,39,13,0,40,342,0,0,[1,185722,139],[[185722,2,343]]],[0,39,13,0,40,344,0,0,[1,185862,72],[[185862,2,345]]],[0,39,13,0,40,48,0,0,[1,185934,69],[[185934,2,346]]]]],[0,347,0,0,0,0,0,0,[1,186003,70],[[0,25,26,0,0,348,0,0,[1,186003,69],[[0,21,22,0,23,28,0,0,[1,186003,0],[]],[0,29,13,0,30,31,0,0,[1,186004,16],[]],[0,32,13,0,33,31,0,0,[1,186020,8],[]],[0,34,13,0,35,36,0,0,[1,186029,43],[[186029,2,349]]]]]]],[0,350,0,0,0,0,0,0,[1,186073,1607],[[0,32,13,0,33,351,0,0,[1,186073,1604],[]],[0,21,22,0,23,352,0,0,[1,187677,2],[]]]],[2,298,13,0,299,0,0,0,[1,187680,278],[]]]]],[],[1,1,0,0]]],[],[],[3,3,0,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*User Registration","*/Users/Bipinlp/Documents/New_Pogo/pogoRobot/pogoRobot/TestCases/User_Registration.robot","*pogoRobot/TestCases/User_Registration.robot","*Visit url","*Reuse","*Open Browser","*SeleniumLibrary","*<p>Opens a new browser instance to the optional <code>url\x3c/code>.\x3c/p>","*${Website}, ${browser}, executable_path=${DriverLocation}","*Opening browser 'chrome' to base url '<a href=\"https://www.pogo.com/\">https://www.pogo.com/\x3c/a>'.","*Maximize Browser Window","*<p>Maximizes current browser window.\x3c/p>","*Log To Console","*BuiltIn","*<p>Logs the given message to the console.\x3c/p>","*Website has opened","*Navigate to Register page","*Click with log Display","*pgKeyword","*//button[@class='default__1rbFd primary__3GVte button__3Z-Ug registerCTA__eNZ_5'], Register Button","*clicking on ${message}","*Wait Until Element Is Enabled","*<p>Waits until the element <code>locator\x3c/code> is enabled.\x3c/p>","*${element}, 10s","*Wait Until Element Is Visible","*<p>Waits until the element <code>locator\x3c/code> is visible.\x3c/p>","*Click Element","*<p>Click the element identified by <code>locator\x3c/code>.\x3c/p>","*${element}","*Clicking element '//button[@class='default__1rbFd primary__3GVte button__3Z-Ug registerCTA__eNZ_5']'.","*Enter a unique username, email, and password","*Select From List By Value","*<p>Selects options from selection list <code>locator\x3c/code> by <code>values\x3c/code>.\x3c/p>","*clientreg_country-selctrl, NP","*Selecting options from selection list 'clientreg_country-selctrl' by value NP.","*clientreg_dobmonth-selctrl, 1","*Selecting options from selection list 'clientreg_dobmonth-selctrl' by value 1.","*Select From List By Index","*<p>Selects options from selection list <code>locator\x3c/code> by <code>indexes\x3c/code>.\x3c/p>","*clientreg_dobday-selctrl, 10","*Selecting options from selection list 'clientreg_dobday-selctrl' by index 10.","*clientreg_dobyear-selctrl, 1995","*Selecting options from selection list 'clientreg_dobyear-selctrl' by value 1995.","*panel-action-area-container, Next Button","*Clicking element 'panel-action-area-container'.","*email, 20s","*Input Text","*<p>Types the given <code>text\x3c/code> into the text field identified by <code>locator\x3c/code>.\x3c/p>","*email, ${emailID}","*Typing text 'vovos31760@naobk.com' into text field 'email'.","*originId, ${userID}","*Typing text 'vovos31760' into text field 'originId'.","*password, ${password}","*Typing text 'Pogo&amp;_1230' into text field 'password'.","*Submit the registration form","*//div[@id='reg-basic-info-panel']//div[@class='panel-action-area'], Next Button","*Clicking element '//div[@id='reg-basic-info-panel']//div[@class='panel-action-area']'.","*Validate the successful registration","*//iframe, 20s","*✅ *****The Test is consider as passed since there is automation to protect automation for resestration***** ✅","*Close All Browsers","*<p>Closes all open browsers and resets the browser cache.\x3c/p>"]);
+window.output["strings"] = window.output["strings"].concat(["*","*TestCases","*/Users/Bipinlp/Documents/New_Pogo/pogoRobot/pogoRobot/TestCases","*pogoRobot/TestCases","*GameSearch","*/Users/Bipinlp/Documents/New_Pogo/pogoRobot/pogoRobot/TestCases/GameSearch.robot","*pogoRobot/TestCases/GameSearch.robot","*Validate the Game Search","*SmokeTest","*Login to system","*Reuse","*Visit url","*Open Browser","*SeleniumLibrary","*<p>Opens a new browser instance to the optional <code>url\x3c/code>.\x3c/p>","*${Website}    ${browser}    executable_path=${DriverLocation}","*s1-s1-t1-k1-k1-k1","*exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.","*Opening browser 'chrome' to base url '<a href=\"https://www.pogo.com/\">https://www.pogo.com/\x3c/a>'.","*Maximize Browser Window","*<p>Maximizes current browser window.\x3c/p>","*Log To Console","*BuiltIn","*<p>Logs the given message to the console.\x3c/p>","*Website has opened","*Click with log Display","*pgKeyword","*//button[.//div[text()='Sign In']]    Sign In","*clicking on ${message}","*Wait Until Element Is Enabled","*<p>Waits until the element <code>locator\x3c/code> is enabled.\x3c/p>","*${element}    10s","*Wait Until Element Is Visible","*<p>Waits until the element <code>locator\x3c/code> is visible.\x3c/p>","*Click Element","*<p>Click the element identified by <code>locator\x3c/code>.\x3c/p>","*${element}","*Clicking element '//button[.//div[text()='Sign In']]'.","*email    10s","*Input Text","*<p>Types the given <code>text\x3c/code> into the text field identified by <code>locator\x3c/code>.\x3c/p>","*email    ${username}","*Typing text 'bps.thapa@gmail.com' into text field 'email'.","*content","*Clicking element 'content'.","*logInBtn","*Clicking element 'logInBtn'.","*password    10s","*password    ${password}","*Typing text '4f4DP5KT!2ar&amp;%6' into text field 'password'.","*logInBtn    LoginButton after Entering password","*✅ *****LOGIN SUCCEED***** ✅","*Search for a specific game","*<p>This iwll perform the search on the Homepage\x3c/p>","*//input[@placeholder='Search for games']","*//input[@placeholder='Search for games']    ${game}","*Typing text 'solitaire' into text field '//input[@placeholder='Search for games']'.","*Press Keys","*<p>Simulates the user pressing key(s) to an element or on the active browser.\x3c/p>","*//input[@placeholder='Search for games']    ENTER","*Sending key(s) ('ENTER',) to //input[@placeholder='Search for games'] element.","*Pressing special key ENTER to element.","*Releasing special key ENTER.","*Verify that the game appears in the search results","*<p>This will check all the search results with its title and sub titles and check if the search results are accurate.\x3c/p>","*Sleep","*<p>Pauses the test executed for the given time.\x3c/p>","*4s","*Slept 4 seconds.","*Wait Until Keyword Succeeds","*<p>Runs the specified keyword and retries if it fails.\x3c/p>","*10s    5    Scroll Element Into View    //a[normalize-space()='Home']","*Scroll Element Into View","*<p>Scrolls the element identified by <code>locator\x3c/code> into view.\x3c/p>","*//a[normalize-space()='Home']","*Get WebElements","*<p>Returns a list of WebElement objects matching the <code>locator\x3c/code>.\x3c/p>","*//a[@class='link__2M5Vp gameName__31gZM']","*${element_1}","*${element_1} = [&lt;selenium.webdriver.remote.webelement.WebElement (session=\"e640b7fbbdd0e14ba7197eab32659f4a\", element=\"f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4817\")&gt;, &lt;selenium.webdr...","*//span[@class='categoryLabel__exxVq']","*${elements2}","*${elements2} = [&lt;selenium.webdriver.remote.webelement.WebElement (session=\"e640b7fbbdd0e14ba7197eab32659f4a\", element=\"f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4818\")&gt;, &lt;selenium.webdr...","*Get Element Count","*<p>Returns the number of elements matching <code>locator\x3c/code>.\x3c/p>","*${count}","*${count} = 12","*The total found result is: ${count}","*${el}    IN    @{element_1}","*${el} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4817&quot;)&gt;","*Get Text","*<p>Returns the text value of the element identified by <code>locator\x3c/code>.\x3c/p>","*${el}","*${text}","*${text} = Snowbird Solitaire","*Convert To Lower Case","*String","*<p>Converts string to lower case.\x3c/p>","*${lower_text}","*${lower_text} = snowbird solitaire","*Append To List","*Collections","*<p>Adds <code>values\x3c/code> to the end of <code>list\x3c/code>.\x3c/p>","*${game_texts}    ${lower_text}","*${el} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4713&quot;)&gt;","*${text} = Jet Set Solitaire","*${lower_text} = jet set solitaire","*${el} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4747&quot;)&gt;","*${text} = Solitaire Home Story","*${lower_text} = solitaire home story","*${el} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4696&quot;)&gt;","*${text} = Tri-Peaks Solitaire HD","*${lower_text} = tri-peaks solitaire hd","*${el} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4834&quot;)&gt;","*${text} = First Class Solitaire HD","*${lower_text} = first class solitaire hd","*${el} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4782&quot;)&gt;","*${text} = Pogo™ Addiction Solitaire HD","*${lower_text} = pogo™ addiction solitaire hd","*${el} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4730&quot;)&gt;","*${text} = Rainy Day Spider Solitaire HD","*${lower_text} = rainy day spider solitaire hd","*${el} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4764&quot;)&gt;","*${text} = Solitaire Blitz","*${lower_text} = solitaire blitz","*${el} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4800&quot;)&gt;","*${text} = World Class Solitaire HD","*${lower_text} = world class solitaire hd","*${el} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.5479&quot;)&gt;","*${text} = Thousand Island Solitaire HD","*${lower_text} = thousand island solitaire hd","*${el} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.5497&quot;)&gt;","*${text} = Aces Up! HD","*${lower_text} = aces up! hd","*${el} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.5461&quot;)&gt;","*${text} = Payday Freecell HD","*${lower_text} = payday freecell hd","*${game_texts}","*${el_2}    IN    @{elements2}","*${el_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4818&quot;)&gt;","*${el_2}","*${text} = SOLITAIRE","*${lower_text} = solitaire","*${game_texts_2}    ${lower_text}","*${el_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4714&quot;)&gt;","*${text} = CARD","*${lower_text} = card","*${el_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4748&quot;)&gt;","*${el_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4697&quot;)&gt;","*${el_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4835&quot;)&gt;","*${el_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4783&quot;)&gt;","*${el_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4731&quot;)&gt;","*${el_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4765&quot;)&gt;","*${el_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4801&quot;)&gt;","*${el_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.5480&quot;)&gt;","*${el_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.5498&quot;)&gt;","*${el_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e640b7fbbdd0e14ba7197eab32659f4a&quot;, element=&quot;f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.5462&quot;)&gt;","*Get Length","*<p>Returns and logs the length of the given item as an integer.\x3c/p>","*${length}","*Length is 12.","*${length} = 12","*${index}    IN RANGE    ${length}","*${index} = 0","*Get From List","*<p>Returns the value specified with an <code>index\x3c/code> from <code>list\x3c/code>.\x3c/p>","*${game_texts}    ${index}","*${val1}","*${val1} = snowbird solitaire","*${game_texts_2}    ${index}","*${val2}","*${val2} = solitaire","*'${game}' in '${val1}' or '${game}' in '${val2}'","*✅ Game Name found that matches with search keyword at index ${index}","*Fail","*<p>Fails the test with the given message and optionally alters its tags.\x3c/p>","*❌ Game '${game}' incorrect search result found which is ${val1}","*${index} = 1","*${val1} = jet set solitaire","*${val2} = card","*${index} = 2","*${val1} = solitaire home story","*${index} = 3","*${val1} = tri-peaks solitaire hd","*${index} = 4","*${val1} = first class solitaire hd","*${index} = 5","*${val1} = pogo™ addiction solitaire hd","*${index} = 6","*${val1} = rainy day spider solitaire hd","*${index} = 7","*${val1} = solitaire blitz","*${index} = 8","*${val1} = world class solitaire hd","*${index} = 9","*${val1} = thousand island solitaire hd","*${index} = 10","*${val1} = aces up! hd","*${index} = 11","*${val1} = payday freecell hd","*Navigate to the game’s page and validate that the Play Now button is present","*<p>This will open each search result in new tab and check if the there is Play Now button or not. If its dont found Play Now button in any of the game page then this test will failed\x3c/p>","*${elements}","*${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session=\"e640b7fbbdd0e14ba7197eab32659f4a\", element=\"f.409EBB09138CC5EF3184244226E6A3AE.d.78EE6569A9CA2D32F585B67A0CA3B231.e.4817\")&gt;, &lt;selenium.webdr...","*${el}    IN    @{elements}","*10s    5    Scroll Element Into View    ${el}","*Open game in new tab and check the playnow button","*<p>Since some of the game has Try For Free insead of Play Now. I have check play icon to deal with both cases\x3c/p>","*${gameName}","*${gameName} = Snowbird Solitaire","*Get Window Handles","*<p>Returns all child window handles of the selected browser as a list.\x3c/p>","*${main_tab}","*${main_tab} = ['409EBB09138CC5EF3184244226E6A3AE']","*Set Variable","*<p>Returns the given values which can then be assigned to a variables.\x3c/p>","*${main_tab}[0]","*${main_tab} = 409EBB09138CC5EF3184244226E6A3AE","*Get Element Attribute","*<p>Returns the value of <code>attribute\x3c/code> from the element <code>locator\x3c/code>.\x3c/p>","*${el}    href","*${link}","*${link} = <a href=\"https://www.pogo.com/games/snowbird-solitaire\">https://www.pogo.com/games/snowbird-solitaire\x3c/a>","*Execute Javascript","*<p>Executes the given JavaScript code with possible arguments.\x3c/p>","*window.open(\"${link}\", \"_blank\");","*Executing JavaScript:\nwindow.open(\"https://www.pogo.com/games/snowbird-solitaire\", \"_blank\");\nWithout any arguments.","*5s","*Slept 5 seconds.","*${tabs}","*${tabs} = ['409EBB09138CC5EF3184244226E6A3AE', '3F4768EA2A0E4D6FEDBF31FB213D2D66']","*Switch Window","*<p>Switches to browser window matching <code>locator\x3c/code>.\x3c/p>","*${tabs}[-1]","*css:.playIcon__3ndLd    20    ****Play Now or Try Now button is missing for: ${gameName}*****","*Close Window","*<p>Closes currently opened and selected browser window/tab.\x3c/p>","*Run Keyword And Ignore Error","*<p>Runs the given keyword with the given arguments and ignores possible error.\x3c/p>","*Click Element    //button[.//div[text()='Cancel']]","*//button[.//div[text()='Cancel']]","*Clicking element '//button[.//div[text()='Cancel']]'.","*${gameName} = Jet Set Solitaire","*${link} = <a href=\"https://www.pogo.com/games/jet-set-solitaire\">https://www.pogo.com/games/jet-set-solitaire\x3c/a>","*Executing JavaScript:\nwindow.open(\"https://www.pogo.com/games/jet-set-solitaire\", \"_blank\");\nWithout any arguments.","*${tabs} = ['409EBB09138CC5EF3184244226E6A3AE', '469B6424886DDBC15A9D42C860AD8B34']","*\x3c/td>\x3c/tr><tr><td colspan=\"3\"><a href=\"selenium-screenshot-13.png\"><img src=\"selenium-screenshot-13.png\" width=\"800px\">\x3c/a>","*Element with locator '//button[.//div[text()='Cancel']]' not found.","*${gameName} = Solitaire Home Story","*${link} = <a href=\"https://www.pogo.com/games/solitaire-home-story\">https://www.pogo.com/games/solitaire-home-story\x3c/a>","*Executing JavaScript:\nwindow.open(\"https://www.pogo.com/games/solitaire-home-story\", \"_blank\");\nWithout any arguments.","*${tabs} = ['409EBB09138CC5EF3184244226E6A3AE', '8DA4240D9BEAEA981A1B11C8E9CEBFDB']","*\x3c/td>\x3c/tr><tr><td colspan=\"3\"><a href=\"selenium-screenshot-14.png\"><img src=\"selenium-screenshot-14.png\" width=\"800px\">\x3c/a>","*${gameName} = Tri-Peaks Solitaire HD","*${link} = <a href=\"https://www.pogo.com/games/tripeaks-solitaire\">https://www.pogo.com/games/tripeaks-solitaire\x3c/a>","*Executing JavaScript:\nwindow.open(\"https://www.pogo.com/games/tripeaks-solitaire\", \"_blank\");\nWithout any arguments.","*${tabs} = ['409EBB09138CC5EF3184244226E6A3AE', '7414B65716C3F958B06E9D7032FEA96F']","*\x3c/td>\x3c/tr><tr><td colspan=\"3\"><a href=\"selenium-screenshot-15.png\"><img src=\"selenium-screenshot-15.png\" width=\"800px\">\x3c/a>","*${gameName} = First Class Solitaire HD","*${link} = <a href=\"https://www.pogo.com/games/first-class-solitaire\">https://www.pogo.com/games/first-class-solitaire\x3c/a>","*Executing JavaScript:\nwindow.open(\"https://www.pogo.com/games/first-class-solitaire\", \"_blank\");\nWithout any arguments.","*${tabs} = ['409EBB09138CC5EF3184244226E6A3AE', 'C97569931CA9C53C98609F97C387604E']","*\x3c/td>\x3c/tr><tr><td colspan=\"3\"><a href=\"selenium-screenshot-16.png\"><img src=\"selenium-screenshot-16.png\" width=\"800px\">\x3c/a>","*${gameName} = Pogo™ Addiction Solitaire HD","*${link} = <a href=\"https://www.pogo.com/games/addiction-solitaire-hd\">https://www.pogo.com/games/addiction-solitaire-hd\x3c/a>","*Executing JavaScript:\nwindow.open(\"https://www.pogo.com/games/addiction-solitaire-hd\", \"_blank\");\nWithout any arguments.","*${tabs} = ['409EBB09138CC5EF3184244226E6A3AE', 'E4551D868CB3AD33A934D8B0E25EA7EB']","*\x3c/td>\x3c/tr><tr><td colspan=\"3\"><a href=\"selenium-screenshot-17.png\"><img src=\"selenium-screenshot-17.png\" width=\"800px\">\x3c/a>","*${gameName} = Rainy Day Spider Solitaire HD","eNqdy0sKgCAQANCriLTV2Ud6lyFNh/wxCiLR3btDb/+2J1G5X2HEgSKyv4yMY7S+A8w5dauh6rNmCJh9B0YqSzlcqjdynlWviQYSe2l/tQPQfiDIL78=","*Executing JavaScript:\nwindow.open(\"https://www.pogo.com/games/rainy-day-spider-solitaire\", \"_blank\");\nWithout any arguments.","*${tabs} = ['409EBB09138CC5EF3184244226E6A3AE', '042268EE0B480D940A727B9A234B31FC']","*\x3c/td>\x3c/tr><tr><td colspan=\"3\"><a href=\"selenium-screenshot-18.png\"><img src=\"selenium-screenshot-18.png\" width=\"800px\">\x3c/a>","*${gameName} = Solitaire Blitz","*${link} = <a href=\"https://www.pogo.com/games/solitaire-blitz\">https://www.pogo.com/games/solitaire-blitz\x3c/a>","*Executing JavaScript:\nwindow.open(\"https://www.pogo.com/games/solitaire-blitz\", \"_blank\");\nWithout any arguments.","*${tabs} = ['409EBB09138CC5EF3184244226E6A3AE', 'BC89A27A33EC53596ADA9352A46CCC8A']","*\x3c/td>\x3c/tr><tr><td colspan=\"3\"><a href=\"selenium-screenshot-19.png\"><img src=\"selenium-screenshot-19.png\" width=\"800px\">\x3c/a>","*${gameName} = World Class Solitaire HD","*${link} = <a href=\"https://www.pogo.com/games/world-class-solitaire\">https://www.pogo.com/games/world-class-solitaire\x3c/a>","*Executing JavaScript:\nwindow.open(\"https://www.pogo.com/games/world-class-solitaire\", \"_blank\");\nWithout any arguments.","*${tabs} = ['409EBB09138CC5EF3184244226E6A3AE', '7E0A95CEFA27D945A827C6D5E5EFA632']","*\x3c/td>\x3c/tr><tr><td colspan=\"3\"><a href=\"selenium-screenshot-20.png\"><img src=\"selenium-screenshot-20.png\" width=\"800px\">\x3c/a>","*${gameName} = Thousand Island Solitaire HD","*${link} = <a href=\"https://www.pogo.com/games/thousand-island\">https://www.pogo.com/games/thousand-island\x3c/a>","*Executing JavaScript:\nwindow.open(\"https://www.pogo.com/games/thousand-island\", \"_blank\");\nWithout any arguments.","*${tabs} = ['409EBB09138CC5EF3184244226E6A3AE', '3D416C17123117F37ED40598DAF0D082']","*\x3c/td>\x3c/tr><tr><td colspan=\"3\"><a href=\"selenium-screenshot-21.png\"><img src=\"selenium-screenshot-21.png\" width=\"800px\">\x3c/a>","*${gameName} = Aces Up! HD","*${link} = <a href=\"https://www.pogo.com/games/aces-up-solitaire\">https://www.pogo.com/games/aces-up-solitaire\x3c/a>","*Executing JavaScript:\nwindow.open(\"https://www.pogo.com/games/aces-up-solitaire\", \"_blank\");\nWithout any arguments.","*${tabs} = ['409EBB09138CC5EF3184244226E6A3AE', '8555DF7F4A1B09818463F0CA04A7613D']","*\x3c/td>\x3c/tr><tr><td colspan=\"3\"><a href=\"selenium-screenshot-22.png\"><img src=\"selenium-screenshot-22.png\" width=\"800px\">\x3c/a>","*${gameName} = Payday Freecell HD","*${link} = <a href=\"https://www.pogo.com/games/payday-freecell-hd\">https://www.pogo.com/games/payday-freecell-hd\x3c/a>","*Executing JavaScript:\nwindow.open(\"https://www.pogo.com/games/payday-freecell-hd\", \"_blank\");\nWithout any arguments.","*${tabs} = ['409EBB09138CC5EF3184244226E6A3AE', 'D0AC14ABDF2051060A0452DD0B77AF48']","*\x3c/td>\x3c/tr><tr><td colspan=\"3\"><a href=\"selenium-screenshot-23.png\"><img src=\"selenium-screenshot-23.png\" width=\"800px\">\x3c/a>","*Close All Browsers","*<p>Closes all open browsers and resets the browser cache.\x3c/p>","*Logout Login","*/Users/Bipinlp/Documents/New_Pogo/pogoRobot/pogoRobot/TestCases/Logout_Login.robot","*pogoRobot/TestCases/Logout_Login.robot","*Log out and re-login the account","*s1-s2-t1-k1-k1-k1","*Suppressing StaleElementReferenceException from Selenium.","*logout from the system","*//img[@alt='Avatar Image']    Profile","*Clicking element '//img[@alt='Avatar Image']'.","*2s","*Slept 2 seconds.","*//div[contains(text(),'Sign Out')]","*//button[@class='default__1rbFd secondary__13sCi button__3Z-Ug']    SignOut","*Clicking element '//button[@class='default__1rbFd secondary__13sCi button__3Z-Ug']'.","*//button[@class='large__2-kkI primary__3GVte button__3Z-Ug']    CONTINUE to logout","*Clicking element '//button[@class='large__2-kkI primary__3GVte button__3Z-Ug']'.","*//button[.//div[text()='Sign In']]    10s","*re-login to the system","*s1-s2-t1-k3-k1-k1-k1","*User Registration","*/Users/Bipinlp/Documents/New_Pogo/pogoRobot/pogoRobot/TestCases/User_Registration.robot","*pogoRobot/TestCases/User_Registration.robot","*s1-s3-t1-k1-k1","*Navigate to Register page","*//button[@class='default__1rbFd primary__3GVte button__3Z-Ug registerCTA__eNZ_5']    Register Button","*Clicking element '//button[@class='default__1rbFd primary__3GVte button__3Z-Ug registerCTA__eNZ_5']'.","*Enter a unique username, email, and password","*Select From List By Value","*<p>Selects options from selection list <code>locator\x3c/code> by <code>values\x3c/code>.\x3c/p>","*clientreg_country-selctrl    NP","*Selecting options from selection list 'clientreg_country-selctrl' by value NP.","*clientreg_dobmonth-selctrl    1","*Selecting options from selection list 'clientreg_dobmonth-selctrl' by value 1.","*Select From List By Index","*<p>Selects options from selection list <code>locator\x3c/code> by <code>indexes\x3c/code>.\x3c/p>","*clientreg_dobday-selctrl    10","*Selecting options from selection list 'clientreg_dobday-selctrl' by index 10.","*clientreg_dobyear-selctrl    1995","*Selecting options from selection list 'clientreg_dobyear-selctrl' by value 1995.","*panel-action-area-container    Next Button","*Clicking element 'panel-action-area-container'.","*email    20s","*email    ${emailID}","*Typing text 'vovos31760@naobk.com' into text field 'email'.","*originId    ${userID}","*Typing text 'vovos31760' into text field 'originId'.","*Typing text 'Pogo&amp;_1230' into text field 'password'.","*Submit the registration form","*//div[@id='reg-basic-info-panel']//div[@class='panel-action-area']    Next Button","*Clicking element '//div[@id='reg-basic-info-panel']//div[@class='panel-action-area']'.","*Validate the successful registration","*//iframe    20s","*✅ *****The Test is consider as passed since there is PUZZLE to protect automation for resestration***** ✅"]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:10","fail":0,"label":"All Tests","pass":1,"skip":0}],[],[{"elapsed":"00:00:10","fail":0,"id":"s1","label":"User Registration","name":"User Registration","pass":1,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:03:08","fail":0,"label":"All Tests","pass":3,"skip":0}],[{"elapsed":"00:03:08","fail":0,"label":"SmokeTest","pass":3,"skip":0}],[{"elapsed":"00:03:08","fail":0,"id":"s1","label":"TestCases","name":"TestCases","pass":3,"skip":0},{"elapsed":"00:02:35","fail":0,"id":"s1-s1","label":"TestCases.GameSearch","name":"GameSearch","pass":1,"skip":0},{"elapsed":"00:00:23","fail":0,"id":"s1-s2","label":"TestCases.Logout Login","name":"Logout Login","pass":1,"skip":0},{"elapsed":"00:00:10","fail":0,"id":"s1-s3","label":"TestCases.User Registration","name":"User Registration","pass":1,"skip":0}]];
 </script>
 <script type="text/javascript">
-window.output["errors"] = [];
+window.output["errors"] = [[175,3,17,16],[155222,3,17,304],[170651,3,17,318],[178226,3,17,322]];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1744444715868;
+window.output["baseMillis"] = 1744446821393;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 10389;
+window.output["generated"] = 188040;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
@@ -1834,7 +2099,7 @@ window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.h
 </script>
 <title></title>
 </head>
-<body>
+<body data-theme="dark">
 <div id="javascript-disabled">
   <h1>Opening Robot Framework log failed</h1>
   <ul>
@@ -1844,12 +2109,13 @@ window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.h
   </ul>
 </div>
 <script type="text/javascript">removeJavaScriptDisabledWarning();</script>
-
 <div id="header"></div>
 <div id="statistics-container"></div>
 
 <script type="text/javascript">
 $(document).ready(function() {
+    storage.init();
+    theme.init(storage);
     try {
         var topsuite = window.testdata.suite();
     } catch (error) {
@@ -1857,6 +2123,7 @@ $(document).ready(function() {
         return;
     }
     initLayout(topsuite.name, 'Log');
+    theme.reflectPreference();
     addStatistics();
     addErrors();
     addExecutionLog(topsuite);
@@ -1897,25 +2164,6 @@ function drawErrorsRecursively(errors, target) {
         // Errors may have moved scroll position. Resetting location re-scrolls.
         if (window.location.hash)
             window.location.replace(window.location.hash);
-        highlightLinkTarget();
-    }
-}
-
-function highlightLinkTarget() {
-    if (window.location.hash) {
-        var target = $(window.location.hash);
-        highlight(target);
-    }
-}
-
-function highlight(element, color) {
-    if (color === undefined)
-        color = 242;
-    if (color < 255) {
-        element.css({'background-color': 'rgb('+color+','+color+','+color+')'});
-        setTimeout(function () { highlight(element, color+1); }, 300);
-    } else {
-        element.css({'background-color': ''});
     }
 }
 
@@ -1933,7 +2181,6 @@ function makeElementVisible(id) {
             expandFailed(window.testdata.findLoaded(util.last(ids)));
             window.location.hash = id;
             document.getElementById(id).scrollIntoView();
-            highlightLinkTarget();
         }
     });
 }
@@ -1957,7 +2204,7 @@ function addExecutionLog(main) {
 
 <script type="text/x-jquery-tmpl" id="tagStatisticsRowTemplate">
   <tr class="row-${$item.index}">
-    <td class="stats-col-name" title="{{html doc}}">
+    <td class="stats-col-name" title="${doc}">
       <div class="stat-name">
         <span>{{html label}}</span>
         {{if info}}(${info}){{/if}}
@@ -2131,8 +2378,9 @@ function addExecutionLog(main) {
       <div class="element-header-left" title="${type}  {{if name}}{{html fullName}}  {{/if}}[${status}]">
         <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
         <span class="label ${status.toLowerCase()}">${type}</span>
-        <span>{{html assign}}</span>
+        <span class="assign">{{html assign}}</span>
         <span class="name"><span class="parent-name">{{html libname}}{{if libname}} . {{/if}}</span>{{html name}}</span>
+        &nbsp;
         <span class="arg">{{html arguments}}</span>
       </div>
       <div class="element-header-right" onclick="stopPropagation(event)">
@@ -2166,6 +2414,12 @@ function addExecutionLog(main) {
           <th>Start / End / Elapsed:</th>
           <td>${times.startTime} / ${times.endTime} / ${times.elapsedTime}</td>
         </tr>
+        {{if message()}}
+        <tr>
+          <th>Message:</th>
+          <td class="message">{{html message()}}</td>
+        </tr>
+        {{/if}}
       </table>
     </div>
   </div>
@@ -2188,6 +2442,7 @@ function addExecutionLog(main) {
   <div id="log-level-selector">
   Log level:
     <select onchange="logLevelSelected(this.options[selectedIndex].value)">
+      <option value="3">WARN</option>
       <option value="2">INFO</option>
       <option value="1">DEBUG</option>
       {{if showTrace()}}<option value="0">TRACE</option>{{/if}}
