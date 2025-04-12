@@ -1,341 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on darwin)" generated="20250412 12:49:53.490" rpa="false" schemaversion="4">
-<suite id="s1" name="Logout Login" source="/Users/Bipinlp/Documents/Bipin_Final_Pogo/pogoRobot/TestCases/Logout_Login.robot">
-<test id="s1-t1" name="Log out and re-login the account" line="15">
-<kw name="Login to system" library="Reuse" type="SETUP">
+<robot generator="Robot 6.1.1 (Python 3.11.5 on darwin)" generated="20250412 13:43:35.865" rpa="false" schemaversion="4">
+<suite id="s1" name="User Registration" source="/Users/Bipinlp/Documents/New_Pogo/pogoRobot/pogoRobot/TestCases/User_Registration.robot">
+<test id="s1-t1" name="User Registration" line="13">
 <kw name="Visit url" library="Reuse">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${Website}</arg>
 <arg>${browser}</arg>
 <arg>executable_path=${DriverLocation}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20250412 12:49:53.640" level="INFO">Opening browser 'chrome' to base url 'https://www.pogo.com/'.</msg>
-<status status="PASS" starttime="20250412 12:49:53.639" endtime="20250412 12:49:55.647"/>
+<msg timestamp="20250412 13:43:36.015" level="INFO">Opening browser 'chrome' to base url 'https://www.pogo.com/'.</msg>
+<status status="PASS" starttime="20250412 13:43:36.014" endtime="20250412 13:43:38.099"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20250412 12:49:55.647" endtime="20250412 12:49:55.978"/>
+<status status="PASS" starttime="20250412 13:43:38.100" endtime="20250412 13:43:38.431"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Website has opened</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250412 12:49:55.979" endtime="20250412 12:49:55.979"/>
+<status status="PASS" starttime="20250412 13:43:38.432" endtime="20250412 13:43:38.432"/>
 </kw>
-<status status="PASS" starttime="20250412 12:49:53.639" endtime="20250412 12:49:55.979"/>
+<status status="PASS" starttime="20250412 13:43:36.014" endtime="20250412 13:43:38.432"/>
 </kw>
+<kw name="Navigate to Register page">
 <kw name="Click with log Display" library="pgKeyword">
-<arg>//button[.//div[text()='Sign In']]</arg>
-<arg>Sign In</arg>
+<arg>//button[@class='default__1rbFd primary__3GVte button__3Z-Ug registerCTA__eNZ_5']</arg>
+<arg>Register Button</arg>
 <kw name="Log To Console" library="BuiltIn">
 <arg>clicking on ${message}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250412 12:49:55.980" endtime="20250412 12:49:55.980"/>
+<status status="PASS" starttime="20250412 13:43:38.435" endtime="20250412 13:43:38.435"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${element}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20250412 12:49:55.980" endtime="20250412 12:49:56.208"/>
+<status status="PASS" starttime="20250412 13:43:38.435" endtime="20250412 13:43:38.486"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${element}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250412 12:49:56.209" endtime="20250412 12:49:56.223"/>
+<status status="PASS" starttime="20250412 13:43:38.486" endtime="20250412 13:43:38.503"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250412 12:49:56.224" level="INFO">Clicking element '//button[.//div[text()='Sign In']]'.</msg>
-<status status="PASS" starttime="20250412 12:49:56.224" endtime="20250412 12:49:59.508"/>
+<msg timestamp="20250412 13:43:38.504" level="INFO">Clicking element '//button[@class='default__1rbFd primary__3GVte button__3Z-Ug registerCTA__eNZ_5']'.</msg>
+<status status="PASS" starttime="20250412 13:43:38.503" endtime="20250412 13:43:41.874"/>
 </kw>
-<status status="PASS" starttime="20250412 12:49:55.979" endtime="20250412 12:49:59.508"/>
+<status status="PASS" starttime="20250412 13:43:38.433" endtime="20250412 13:43:41.874"/>
+</kw>
+<status status="PASS" starttime="20250412 13:43:38.433" endtime="20250412 13:43:41.874"/>
+</kw>
+<kw name="Enter a unique username, email, and password">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>clientreg_country-selctrl</arg>
+<arg>NP</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20250412 13:43:41.875" level="INFO">Selecting options from selection list 'clientreg_country-selctrl' by value NP.</msg>
+<status status="PASS" starttime="20250412 13:43:41.875" endtime="20250412 13:43:41.983"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>clientreg_dobmonth-selctrl</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20250412 13:43:41.983" level="INFO">Selecting options from selection list 'clientreg_dobmonth-selctrl' by value 1.</msg>
+<status status="PASS" starttime="20250412 13:43:41.983" endtime="20250412 13:43:42.034"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>clientreg_dobday-selctrl</arg>
+<arg>10</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20250412 13:43:42.034" level="INFO">Selecting options from selection list 'clientreg_dobday-selctrl' by index 10.</msg>
+<status status="PASS" starttime="20250412 13:43:42.034" endtime="20250412 13:43:42.116"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>clientreg_dobyear-selctrl</arg>
+<arg>1995</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20250412 13:43:42.117" level="INFO">Selecting options from selection list 'clientreg_dobyear-selctrl' by value 1995.</msg>
+<status status="PASS" starttime="20250412 13:43:42.116" endtime="20250412 13:43:42.160"/>
+</kw>
+<kw name="Click with log Display" library="pgKeyword">
+<arg>panel-action-area-container</arg>
+<arg>Next Button</arg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>clicking on ${message}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20250412 13:43:42.161" endtime="20250412 13:43:42.161"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20250412 13:43:42.162" endtime="20250412 13:43:42.182"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250412 13:43:42.182" endtime="20250412 13:43:42.199"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250412 13:43:42.200" level="INFO">Clicking element 'panel-action-area-container'.</msg>
+<status status="PASS" starttime="20250412 13:43:42.200" endtime="20250412 13:43:42.248"/>
+</kw>
+<status status="PASS" starttime="20250412 13:43:42.160" endtime="20250412 13:43:42.248"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250412 13:43:42.249" endtime="20250412 13:43:43.498"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>email</arg>
-<arg>${username}</arg>
+<arg>${emailID}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20250412 12:49:59.509" level="INFO">Typing text 'bps.thapa@gmail.com' into text field 'email'.</msg>
-<status status="PASS" starttime="20250412 12:49:59.508" endtime="20250412 12:49:59.655"/>
+<msg timestamp="20250412 13:43:43.499" level="INFO">Typing text 'vovos31760@naobk.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20250412 13:43:43.498" endtime="20250412 13:43:43.663"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>content</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250412 12:49:59.656" level="INFO">Clicking element 'content'.</msg>
-<status status="PASS" starttime="20250412 12:49:59.655" endtime="20250412 12:49:59.734"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>logInBtn</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250412 12:49:59.735" level="INFO">Clicking element 'logInBtn'.</msg>
-<status status="PASS" starttime="20250412 12:49:59.734" endtime="20250412 12:50:00.784"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>originId</arg>
+<arg>${userID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250412 13:43:43.663" level="INFO">Typing text 'vovos31760' into text field 'originId'.</msg>
+<status status="PASS" starttime="20250412 13:43:43.663" endtime="20250412 13:43:43.718"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20250412 12:50:00.785" level="INFO">Typing text '4f4DP5KT!2ar&amp;%6' into text field 'password'.</msg>
-<status status="PASS" starttime="20250412 12:50:00.785" endtime="20250412 12:50:00.840"/>
+<msg timestamp="20250412 13:43:43.719" level="INFO">Typing text 'Pogo&amp;_1230' into text field 'password'.</msg>
+<status status="PASS" starttime="20250412 13:43:43.718" endtime="20250412 13:43:43.802"/>
 </kw>
+<status status="PASS" starttime="20250412 13:43:41.875" endtime="20250412 13:43:43.802"/>
+</kw>
+<kw name="Submit the registration form">
 <kw name="Click with log Display" library="pgKeyword">
-<arg>logInBtn</arg>
-<arg>LoginButton after Entering password</arg>
+<arg>//div[@id='reg-basic-info-panel']//div[@class='panel-action-area']</arg>
+<arg>Next Button</arg>
 <kw name="Log To Console" library="BuiltIn">
 <arg>clicking on ${message}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250412 12:50:00.840" endtime="20250412 12:50:00.841"/>
+<status status="PASS" starttime="20250412 13:43:43.803" endtime="20250412 13:43:43.803"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${element}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20250412 12:50:00.841" endtime="20250412 12:50:00.861"/>
+<status status="PASS" starttime="20250412 13:43:43.803" endtime="20250412 13:43:43.822"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${element}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250412 12:50:00.861" endtime="20250412 12:50:00.879"/>
+<status status="PASS" starttime="20250412 13:43:43.823" endtime="20250412 13:43:43.834"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250412 12:50:00.879" level="INFO">Clicking element 'logInBtn'.</msg>
-<status status="PASS" starttime="20250412 12:50:00.879" endtime="20250412 12:50:01.378"/>
+<msg timestamp="20250412 13:43:43.835" level="INFO">Clicking element '//div[@id='reg-basic-info-panel']//div[@class='panel-action-area']'.</msg>
+<status status="PASS" starttime="20250412 13:43:43.834" endtime="20250412 13:43:43.879"/>
 </kw>
-<status status="PASS" starttime="20250412 12:50:00.840" endtime="20250412 12:50:01.378"/>
+<status status="PASS" starttime="20250412 13:43:43.803" endtime="20250412 13:43:43.879"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>✅ *****LOGIN SUCCEED***** ✅</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250412 12:50:01.379" endtime="20250412 12:50:01.380"/>
+<status status="PASS" starttime="20250412 13:43:43.802" endtime="20250412 13:43:43.879"/>
 </kw>
-<status status="PASS" starttime="20250412 12:49:53.638" endtime="20250412 12:50:01.380"/>
-</kw>
-<kw name="logout from the system">
-<kw name="Click with log Display" library="pgKeyword">
-<arg>//img[@alt='Avatar Image']</arg>
-<arg>Profile</arg>
-<kw name="Log To Console" library="BuiltIn">
-<arg>clicking on ${message}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250412 12:50:01.383" endtime="20250412 12:50:01.383"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20250412 12:50:01.383" endtime="20250412 12:50:03.049"/>
-</kw>
+<kw name="Validate the successful registration">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>10s</arg>
+<arg>//iframe</arg>
+<arg>20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250412 12:50:03.049" endtime="20250412 12:50:03.065"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250412 12:50:03.065" level="INFO">Clicking element '//img[@alt='Avatar Image']'.</msg>
-<status status="PASS" starttime="20250412 12:50:03.065" endtime="20250412 12:50:03.125"/>
-</kw>
-<status status="PASS" starttime="20250412 12:50:01.382" endtime="20250412 12:50:03.126"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250412 12:50:05.128" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20250412 12:50:03.127" endtime="20250412 12:50:05.128"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>//div[contains(text(),'Sign Out')]</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20250412 12:50:05.129" endtime="20250412 12:50:05.435"/>
-</kw>
-<kw name="Click with log Display" library="pgKeyword">
-<arg>//button[@class='default__1rbFd secondary__13sCi button__3Z-Ug']</arg>
-<arg>SignOut</arg>
-<kw name="Log To Console" library="BuiltIn">
-<arg>clicking on ${message}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250412 12:50:05.437" endtime="20250412 12:50:05.437"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20250412 12:50:05.438" endtime="20250412 12:50:05.466"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250412 12:50:05.466" endtime="20250412 12:50:05.481"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250412 12:50:05.482" level="INFO">Clicking element '//button[@class='default__1rbFd secondary__13sCi button__3Z-Ug']'.</msg>
-<status status="PASS" starttime="20250412 12:50:05.481" endtime="20250412 12:50:06.829"/>
-</kw>
-<status status="PASS" starttime="20250412 12:50:05.435" endtime="20250412 12:50:06.830"/>
-</kw>
-<kw name="Click with log Display" library="pgKeyword">
-<arg>//button[@class='large__2-kkI primary__3GVte button__3Z-Ug']</arg>
-<arg>CONTINUE to logout</arg>
-<kw name="Log To Console" library="BuiltIn">
-<arg>clicking on ${message}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250412 12:50:06.832" endtime="20250412 12:50:06.834"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20250412 12:50:06.834" endtime="20250412 12:50:07.063"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250412 12:50:07.063" endtime="20250412 12:50:07.074"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250412 12:50:07.074" level="INFO">Clicking element '//button[@class='large__2-kkI primary__3GVte button__3Z-Ug']'.</msg>
-<status status="PASS" starttime="20250412 12:50:07.074" endtime="20250412 12:50:07.144"/>
-</kw>
-<status status="PASS" starttime="20250412 12:50:06.831" endtime="20250412 12:50:07.144"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//button[.//div[text()='Sign In']]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250412 12:50:07.145" endtime="20250412 12:50:07.644"/>
-</kw>
-<status status="PASS" starttime="20250412 12:50:01.380" endtime="20250412 12:50:07.645"/>
-</kw>
-<kw name="re-login to the system">
-<kw name="Login to system" library="Reuse">
-<kw name="Visit url" library="Reuse">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${Website}</arg>
-<arg>${browser}</arg>
-<arg>executable_path=${DriverLocation}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20250412 12:50:07.648" level="INFO">Opening browser 'chrome' to base url 'https://www.pogo.com/'.</msg>
-<status status="PASS" starttime="20250412 12:50:07.647" endtime="20250412 12:50:10.015"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20250412 12:50:10.017" endtime="20250412 12:50:10.357"/>
+<status status="PASS" starttime="20250412 13:43:43.880" endtime="20250412 13:43:45.806"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>Website has opened</arg>
+<arg>✅ *****The Test is consider as passed since there is automation to protect automation for resestration***** ✅</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250412 12:50:10.358" endtime="20250412 12:50:10.358"/>
+<status status="PASS" starttime="20250412 13:43:45.806" endtime="20250412 13:43:45.807"/>
 </kw>
-<status status="PASS" starttime="20250412 12:50:07.646" endtime="20250412 12:50:10.358"/>
-</kw>
-<kw name="Click with log Display" library="pgKeyword">
-<arg>//button[.//div[text()='Sign In']]</arg>
-<arg>Sign In</arg>
-<kw name="Log To Console" library="BuiltIn">
-<arg>clicking on ${message}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250412 12:50:10.359" endtime="20250412 12:50:10.360"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20250412 12:50:10.360" endtime="20250412 12:50:10.407"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250412 12:50:10.408" endtime="20250412 12:50:10.427"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250412 12:50:10.427" level="INFO">Clicking element '//button[.//div[text()='Sign In']]'.</msg>
-<status status="PASS" starttime="20250412 12:50:10.427" endtime="20250412 12:50:13.714"/>
-</kw>
-<status status="PASS" starttime="20250412 12:50:10.358" endtime="20250412 12:50:13.714"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>email</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20250412 12:50:13.715" level="INFO">Typing text 'bps.thapa@gmail.com' into text field 'email'.</msg>
-<status status="PASS" starttime="20250412 12:50:13.714" endtime="20250412 12:50:13.857"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>content</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250412 12:50:13.857" level="INFO">Clicking element 'content'.</msg>
-<status status="PASS" starttime="20250412 12:50:13.857" endtime="20250412 12:50:13.900"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>logInBtn</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250412 12:50:13.901" level="INFO">Clicking element 'logInBtn'.</msg>
-<status status="PASS" starttime="20250412 12:50:13.900" endtime="20250412 12:50:14.922"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>password</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20250412 12:50:14.922" level="INFO">Typing text '4f4DP5KT!2ar&amp;%6' into text field 'password'.</msg>
-<status status="PASS" starttime="20250412 12:50:14.922" endtime="20250412 12:50:14.983"/>
-</kw>
-<kw name="Click with log Display" library="pgKeyword">
-<arg>logInBtn</arg>
-<arg>LoginButton after Entering password</arg>
-<kw name="Log To Console" library="BuiltIn">
-<arg>clicking on ${message}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250412 12:50:14.983" endtime="20250412 12:50:14.984"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20250412 12:50:14.984" endtime="20250412 12:50:15.006"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250412 12:50:15.006" endtime="20250412 12:50:15.029"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250412 12:50:15.030" level="INFO">Clicking element 'logInBtn'.</msg>
-<status status="PASS" starttime="20250412 12:50:15.029" endtime="20250412 12:50:16.307"/>
-</kw>
-<status status="PASS" starttime="20250412 12:50:14.983" endtime="20250412 12:50:16.309"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>✅ *****LOGIN SUCCEED***** ✅</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250412 12:50:16.310" endtime="20250412 12:50:16.313"/>
-</kw>
-<status status="PASS" starttime="20250412 12:50:07.646" endtime="20250412 12:50:16.314"/>
-</kw>
-<status status="PASS" starttime="20250412 12:50:07.645" endtime="20250412 12:50:16.314"/>
+<status status="PASS" starttime="20250412 13:43:43.879" endtime="20250412 13:43:45.807"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20250412 12:50:16.316" endtime="20250412 12:50:16.643"/>
+<status status="PASS" starttime="20250412 13:43:45.808" endtime="20250412 13:43:46.240"/>
 </kw>
-<status status="PASS" starttime="20250412 12:49:53.628" endtime="20250412 12:50:16.643"/>
+<status status="PASS" starttime="20250412 13:43:36.003" endtime="20250412 13:43:46.241"/>
 </test>
-<status status="PASS" starttime="20250412 12:49:53.493" endtime="20250412 12:50:16.645"/>
+<status status="PASS" starttime="20250412 13:43:35.868" endtime="20250412 13:43:46.242"/>
 </suite>
 <statistics>
 <total>
@@ -344,7 +199,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Logout Login">Logout Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="User Registration">User Registration</stat>
 </suite>
 </statistics>
 <errors>
